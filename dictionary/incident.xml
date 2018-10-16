@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,query_hints=true,hasWorkflow=true,live_feed=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="54" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" dependent="x_195647_aws__service_code" dependent_on_field="x_195647_aws__service_code" label="Category" max_length="40" name="x_195647_aws__service_category" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="database-issue" value="database-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="ec2-run-command" value="ec2-run-command"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="feature-request" value="feature-request"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="general-guidance" value="general-guidance"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Job Flow Iissue" value="job-flow-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="linux-spot-instances" value="linux-spot-instances"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="machine-learning-configuration" value="machine-learning-configuration"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="SSH Issue" value="ssh-issue"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="amazon-machine-learning" label="Service Code" max_length="40" name="x_195647_aws__service_code" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Amazon Machine Learning" value="amazon-machine-learning"/>
+                <element inactive_on_update="false" label="DynamoDB" value="amazon-dynamodb"/>
+                <element inactive_on_update="false" label="Elastic Compute Cloud (EC2 - Linux)" value="amazon-elastic-compute-cloud-linux"/>
+            </choice>
+        </element>
+    </element>
+</database>
