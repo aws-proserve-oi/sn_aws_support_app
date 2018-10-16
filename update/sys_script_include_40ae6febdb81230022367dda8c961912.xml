@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_195647_aws_.SupportApi</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SupportApi</name>
+        <script><![CDATA[gs.include('SignUtil');
+var SupportApi = Class.create();
+
+SupportApi.prototype = {
+    
+    initialize: function(creds) {
+        this.creds    = creds;
+        this.endpoint = 'https://support.us-east-1.amazonaws.com/';
+    },
+
+    listCases: function(params) {
+        /*{
+            "caseIdList": [
+                ""
+            ], 
+            "displayId": "", 
+            "afterTime": "", 
+            "beforeTime": "", 
+            "includeResolvedCases": true, 
+            "nextToken": "", 
+            "language": "", 
+            "includeCommunications": true,
+            "maxResults":10
+        }*/
+        var defaults =  {
+            includeResolvedCases: false, 
+            includeCommunications: false,
+            maxResults:10
+        };
+        params = this._extend(defaults, params);
+        if (params["caseIdList"]) delete params["maxResults"];
+        var response = this._execute_request(params, 'DescribeCases');
+        return response.cases;
+    },
+
+    getCaseCommunications: function(params) {
+        /*{
+            "caseId": "", 
+            "beforeTime": "", 
+            "afterTime": "", 
+            "nextToken": "", 
+            "maxResults": 0
+        }*/
+        var response = this._execute_request(params, 'DescribeCommunications');
+        return response.communications;
+    },
+
+    addCaseCommunications: function(params) {
+        /*{
+            "caseId": "", 
+            "communicationBody": "", 
+            "ccEmailAddresses": [
+                ""
+            ], 
+            "attachmentSetId": ""
+        }*/
+        var response = this._execute_request(params, 'AddCommunicationToCase');
+        return response;
+        
+    },
+
+    createCase: function (params) {
+        /*{
+            "subject": "", 
+            "serviceCode": "", 
+            "severityCode": "", 
+            "categoryCode": "", 
+            "communicationBody": "", 
+            "ccEmailAddresses": [
+                ""
+            ], 
+            "language": "", 
+            "issueType": "", 
+            "attachmentSetId": ""
+        }*/
+        var defaults =  {
+            "serviceCode": 'amazon-relational-database-service-mysql', 
+            "categoryCode": "other"
+        };
+        params = this._extend(defaults, params);
+        var response = this._execute_request(params, 'CreateCase');
+        return response.caseId;
+    },
+
+    resolveCase: function (caseId) {
+        /*{
+            "caseId": ""
+        }*/
+        var params = {
+            "caseId" : String(caseId)
+        };
+        var response = this._execute_request(params, 'ResolveCase');
+        return response;
+    },
+
+    addAttachmentsToSet: function(params) {
+        /*{
+            "attachmentSetId": "", 
+            "attachments": [
+                {
+                    "fileName": "", 
+                    "data": null
+                }
+            ]
+        }*/
+        var response = this._execute_request(params, 'AddAttachmentsToSet');
+        return response.getBody();
+    },
+
+    describeAttachment: function(params) {
+        /*{
+           "attachmentId": "string"
+        }*/
+        var response = this._execute_request(params, 'DescribeAttachment');
+        return response;
+    },
+
+    _execute_request: function(params, action) {
+        var opts = {
+            service : 'support', // 'AWSSupport_20130415.',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-amz-json-1.1',
+                'X-Amz-Target': 'AWSSupport_20130415.',
+                'User-Agent'  : ''
+            }
+        };
+        opts.headers['X-Amz-Target'] += action;
+        opts.body = JSON.stringify(params);
+        var signature = AWSSignUtil.sign(opts, this.creds);
+        var request = new sn_ws.RESTMessageV2();
+        request.setHttpMethod(opts.method);
+        request.setEndpoint(this.endpoint);
+        request.setRequestHeader('Content-Type', opts.headers['Content-Type']);
+        request.setRequestHeader('X-Amz-Target', opts.headers['X-Amz-Target']);
+        request.setRequestHeader('Authorization', signature.headers.Authorization);
+        request.setRequestHeader('X-Amz-Date', signature.headers['X-Amz-Date']);
+        request.setRequestHeader('User-Agent', signature.headers['User-Agent']);
+        request.setRequestBody(opts.body);
+        //gs.info("PARAMS: "+JSON.stringify(opts.body));
+        var response = request.execute();
+        if (response.haveError()) {
+            gs.error("AWS request error." +
+                " Error Code: " + response.getErrorCode() +
+                " Message: " + response.getErrorMessage() +
+                " Status Code: "+ response.getStatusCode());
+        } else {
+            return JSON.parse(response.getBody());
+        }
+    },
+
+    _extend: function extend(obj, src) {
+        for (var key in src) {
+            if (src.hasOwnProperty(key)) obj[key] = src[key];
+        }
+        return obj;
+    },
+
+
+    type: 'SupportApi'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-16 02:00:46</sys_created_on>
+        <sys_id>40ae6febdb81230022367dda8c961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SupportApi</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_script_include_40ae6febdb81230022367dda8c961912</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-16 02:00:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

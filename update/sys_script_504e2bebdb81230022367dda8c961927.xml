@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CreateAwsCase</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[gs.include('SupportApi');
+
+function mapSeverity(priority) {
+    var severityCode;
+    switch(priority) {
+        case 5:
+            severityCode = 'low';
+            break;
+        case 4:
+            severityCode = 'normal';
+            break;
+        case 3:
+            severityCode = 'high';
+            break;
+        case 2:
+            severityCode = 'urgent';
+            break;
+        case 1:
+            severityCode = 'critical';
+            break;
+        default:
+            severityCode = 'normal';
+    }
+    return severityCode;
+}
+
+function createAwsCase(incident, aws_account) {
+    var creds = {
+        accessKeyId: String(aws_account.aws_api_key),
+        secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
+    };
+    gs.info("Created AWS Case ID: " + JSON.stringify(creds));
+    /*var creds = {
+        accessKeyId: "AKIAIRRENTUAWZCW2LWA",
+        secretAccessKey: "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"
+    };*/
+    var params = {
+      communicationBody: 'Integration Test Case - Please Ignore - ' + incident.description,
+      subject: 'Integration Test Case - Please Ignore - ' + '['+ incident.number +'] ' + incident.short_description,
+      //categoryCode: 'other',
+      //serviceCode: 'sentinel-report-incident'
+    };
+    
+    params.severityCode = mapSeverity(current.priority);
+
+    AWSApi = new SupportApi(creds);
+    var aws_case_id = AWSApi.createCase(params);
+    gs.info("Created AWS Case ID: " + aws_case_id);
+    
+    // insert in AWS Incidents table
+    var new_aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+    new_aws_incident.initialize();
+    new_aws_incident.case_id = aws_case_id;
+    new_aws_incident.aws_account = aws_account.sys_id;
+    new_aws_incident.incident = current.sys_id;
+    new_aws_incident.insert();
+    return new_aws_incident;
+}
+
+(function executeRule(current, previous) {
+    (function() {
+        gs.info("Creating new AWS Support Case "+current.number+' status '+current.incident_state);
+        var aws_account;
+        var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+        aws_incident.addQuery('incident','=', current.sys_id);
+        aws_incident.query();
+        if (aws_incident.next()) {return;}
+        if (current.assignment_group != '') {
+            aws_account = new GlideRecord('x_195647_aws__x_195647_aws_account');
+            aws_account.addQuery('assignment_group','=', current.assignment_group.sys_id);
+            aws_account.query();
+            if (aws_account.next() && aws_account.active) {
+                var new_aws_incident = createAwsCase(current, aws_account);
+                gs.info("Created new AWS Support case, Id: "+ new_aws_incident.case_id );
+            }
+        }
+    })();
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-16 01:59:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>504e2bebdb81230022367dda8c961927</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>CreateAwsCase</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_script_504e2bebdb81230022367dda8c961927</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-16 02:38:23</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=504e2bebdb81230022367dda8c961927"/>
+</record_update>

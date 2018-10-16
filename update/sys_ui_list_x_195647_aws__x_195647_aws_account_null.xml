@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_195647_aws__x_195647_aws_account" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>environment_name</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>3caf2f2fdb81230022367dda8c961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assignment_group</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>bcaf2f2fdb81230022367dda8c961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>aws_api_key</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>30af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>iam_username</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>b0af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>active</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>34af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>auto_setup</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>b4af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>aws_secret_key</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>38af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assignment_user</element>
+            <list_id display_value="x_195647_aws__x_195647_aws_account" element="NULL" name="x_195647_aws__x_195647_aws_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">74af2f2fdb81230022367dda8c961907</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_id>b8af2f2fdb81230022367dda8c961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_195647_aws__x_195647_aws_account</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-16 02:04:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>74af2f2fdb81230022367dda8c961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_195647_aws__x_195647_aws_account</sys_name>
+            <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+            <sys_update_name>sys_ui_list_x_195647_aws__x_195647_aws_account_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-16 02:04:40</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
