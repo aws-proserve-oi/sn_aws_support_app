@@ -58,11 +58,6 @@ function createAwsCase(incident, aws_account) {
         accessKeyId: String(aws_account.aws_api_key),
         secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
     };
-    gs.info("Created AWS Case ID: " + JSON.stringify(creds));
-    /*var creds = {
-        accessKeyId: "AKIAIRRENTUAWZCW2LWA",
-        secretAccessKey: "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"
-    };*/
     var params = {
       communicationBody: 'Integration Test Case - Please Ignore - ' + incident.description,
       subject: 'Integration Test Case - Please Ignore - ' + '['+ incident.number +'] ' + incident.short_description,
@@ -74,7 +69,6 @@ function createAwsCase(incident, aws_account) {
 
     AWSApi = new SupportApi(creds);
     var aws_case_id = AWSApi.createCase(params);
-    gs.info("Created AWS Case ID: " + aws_case_id);
     
     // insert in AWS Incidents table
     var new_aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
@@ -111,7 +105,7 @@ function createAwsCase(incident, aws_account) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>504e2bebdb81230022367dda8c961927</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>CreateAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -119,7 +113,7 @@ function createAwsCase(incident, aws_account) {
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_504e2bebdb81230022367dda8c961927</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-16 02:38:23</sys_updated_on>
+        <sys_updated_on>2018-10-16 03:06:56</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
