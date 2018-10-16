@@ -48,7 +48,7 @@ function mapSeverity(priority) {
             severityCode = 'critical';
             break;
         default:
-            severityCode = 'normal';
+            severityCode = 'low';
     }
     return severityCode;
 }
@@ -82,7 +82,7 @@ function createAwsCase(incident, aws_account) {
 
 (function executeRule(current, previous) {
     (function() {
-        gs.info("Creating new AWS Support Case "+current.number+' status '+current.incident_state);
+        //gs.info("Creating new AWS Support Case "+current.number+' status '+current.incident_state);
         var aws_account;
         var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
         aws_incident.addQuery('incident','=', current.sys_id);
@@ -105,7 +105,7 @@ function createAwsCase(incident, aws_account) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>504e2bebdb81230022367dda8c961927</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>CreateAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -113,7 +113,7 @@ function createAwsCase(incident, aws_account) {
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_504e2bebdb81230022367dda8c961927</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-16 03:06:56</sys_updated_on>
+        <sys_updated_on>2018-10-16 03:40:49</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
