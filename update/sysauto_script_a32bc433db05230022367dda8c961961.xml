@@ -196,14 +196,14 @@ function createNewIncidentRecord(aws_incident, aws_case, aws_account) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 04:05:23</sys_created_on>
         <sys_id>a32bc433db05230022367dda8c961961</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>UpdateAwsCases</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysauto_script_a32bc433db05230022367dda8c961961</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-17 09:12:08</sys_updated_on>
+        <sys_updated_on>2018-10-17 10:28:57</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

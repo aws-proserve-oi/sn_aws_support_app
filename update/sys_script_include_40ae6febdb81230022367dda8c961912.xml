@@ -38,7 +38,9 @@ SupportApi.prototype = {
         params = this._extend(defaults, params);
         if (params["caseIdList"]) delete params["maxResults"];
         var response = this._execute_request(params, 'DescribeCases');
-        return response.cases;
+        if (response) {
+            return response.cases;
+        }
     },
 
     getCaseCommunications: function(params) {
@@ -50,7 +52,9 @@ SupportApi.prototype = {
             "maxResults": 0
         }*/
         var response = this._execute_request(params, 'DescribeCommunications');
-        return response.communications;
+        if (response) {
+            return response.communications;
+        }
     },
 
     addCaseCommunications: function(params) {
@@ -63,7 +67,9 @@ SupportApi.prototype = {
             "attachmentSetId": ""
         }*/
         var response = this._execute_request(params, 'AddCommunicationToCase');
-        return response;
+        if (response) {
+            return response;
+        }
         
     },
 
@@ -87,7 +93,9 @@ SupportApi.prototype = {
         };
         params = this._extend(defaults, params);*/
         var response = this._execute_request(params, 'CreateCase');
-        return response.caseId;
+        if (response) {
+            return response.caseId;
+        }
     },
 
     resolveCase: function (caseId) {
@@ -98,7 +106,9 @@ SupportApi.prototype = {
             "caseId" : String(caseId)
         };
         var response = this._execute_request(params, 'ResolveCase');
-        return response;
+        if (response) {
+            return response;
+        }
     },
 
     addAttachmentsToSet: function(params) {
@@ -112,7 +122,9 @@ SupportApi.prototype = {
             ]
         }*/
         var response = this._execute_request(params, 'AddAttachmentsToSet');
-        return response;
+        if (response) {
+            return response;
+        }
     },
 
     describeAttachment: function(params) {
@@ -120,7 +132,9 @@ SupportApi.prototype = {
            "attachmentId": "string"
         }*/
         var response = this._execute_request(params, 'DescribeAttachment');
-        return response;
+        if (response) {
+            return response;
+        }
     },
 
     _execute_request: function(params, action) {
@@ -171,13 +185,13 @@ SupportApi.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 02:00:46</sys_created_on>
         <sys_id>40ae6febdb81230022367dda8c961912</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>SupportApi</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_40ae6febdb81230022367dda8c961912</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-16 05:13:51</sys_updated_on>
+        <sys_updated_on>2018-10-17 09:49:05</sys_updated_on>
     </sys_script_include>
 </record_update>
