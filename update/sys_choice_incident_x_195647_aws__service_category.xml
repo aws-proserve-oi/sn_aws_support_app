@@ -9,6 +9,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:56:27</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -28,6 +29,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:55:45</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -47,6 +49,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:56:05</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -66,6 +69,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:56:44</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -85,6 +89,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:46:45</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -104,6 +109,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:55:27</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -123,6 +129,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:54:36</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -142,6 +149,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:55:11</sys_created_on>
             <sys_domain>global</sys_domain>

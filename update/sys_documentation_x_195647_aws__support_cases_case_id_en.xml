@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="case_id" label="Case Id" language="en" table="x_195647_aws__support_cases">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>case_id</element>
+            <help/>
+            <hint/>
+            <label>Case Id</label>
+            <language>en</language>
+            <name>x_195647_aws__support_cases</name>
+            <plural>Case Ids</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-10-26 12:52:33</sys_created_on>
+            <sys_id>38d3e5c7db5d230022367dda8c96196e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Case Id</sys_name>
+            <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+            <sys_update_name>sys_documentation_x_195647_aws__support_cases_case_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-10-26 12:52:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

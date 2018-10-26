@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Create an AWS support case via Incident integration</description>
+        <name>Create AWS Support Case</name>
+        <remember/>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-26 18:06:28</sys_created_on>
+        <sys_id>7f6b6283db11630022367dda8c961906</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create AWS Support Case</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_atf_test_7f6b6283db11630022367dda8c961906</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-26 18:06:28</sys_updated_on>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=7f6b6283db11630022367dda8c961906"/>
+</record_update>

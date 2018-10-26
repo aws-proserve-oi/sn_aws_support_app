@@ -7,7 +7,7 @@
         <hint/>
         <name>Accounts</name>
         <order>100</order>
-        <roles>x_195647_aws_.aws_accounts_user</roles>
+        <roles/>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 01:34:06</sys_created_on>

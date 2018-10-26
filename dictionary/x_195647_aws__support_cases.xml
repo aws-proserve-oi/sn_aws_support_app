@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Support Cases" max_length="40" name="x_195647_aws__support_cases" type="collection">
+        <element label="AWS Account" max_length="32" name="aws_account" reference="x_195647_aws__accounts" type="reference"/>
+        <element label="Case Id" max_length="255" name="case_id" type="string"/>
+        <element label="Incident" max_length="32" name="incident" reference="incident" type="reference"/>
+        <element default="unassigned" label="Status" max_length="255" name="status" type="string"/>
+        <index name="index">
+            <element name="aws_account"/>
+        </index>
+        <index name="index2">
+            <element name="incident"/>
+        </index>
+    </element>
+</database>

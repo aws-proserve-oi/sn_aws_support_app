@@ -9,6 +9,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:48:07</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -28,6 +29,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:47:41</sys_created_on>
             <sys_domain>global</sys_domain>
@@ -47,6 +49,7 @@
             <language>en</language>
             <name>incident</name>
             <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2018-10-16 04:32:54</sys_created_on>
             <sys_domain>global</sys_domain>

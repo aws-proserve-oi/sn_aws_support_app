@@ -70,42 +70,50 @@ function createAwsCase(incident, aws_account) {
     AWSApi = new SupportApi(creds);
     var aws_case_id = AWSApi.createCase(params);
     
-    // insert in AWS Incidents table
-    var new_aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
-    new_aws_incident.initialize();
-    new_aws_incident.case_id = aws_case_id;
-    new_aws_incident.aws_account = aws_account.sys_id;
-    new_aws_incident.incident = current.sys_id;
-    new_aws_incident.insert();
-    return new_aws_incident;
+    // insert in Suppor Cases table
+    var new_aws_support_case = new GlideRecord('x_195647_aws__support_cases');
+    new_aws_support_case.initialize();
+    new_aws_support_case.case_id = aws_case_id;
+    new_aws_support_case.aws_account = aws_account.sys_id;
+    new_aws_support_case.incident = current.sys_id;
+    new_aws_support_case.insert();
+    return new_aws_support_case;
 }
 
 (function executeRule(current, previous) {
     (function() {
-        gs.info("Creating new AWS Support Case "+current.number+' status '+current.incident_state);
-        var aws_account;
-        var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
-        aws_incident.addQuery('incident','=', current.sys_id);
-        aws_incident.query();
-        if (aws_incident.next()) {return;}
+        //gs.info("run Business Rule: CreateAwsCase for incident: "+ current.number);
+        if (( current.x_195647_aws_service_code == "") || (current.x_195647_aws__service_category == "")) {
+            return;
+        }
+        var aws_support_case = new GlideRecord('x_195647_aws__support_cases');
+        aws_support_case.addQuery('incident','=', current.sys_id);
+        aws_support_case.query();
+        if (aws_support_case.next()) {return;}
         if (current.assignment_group != '') {
-            aws_account = new GlideRecord('x_195647_aws__x_195647_aws_account');
+            gs.info("Business Rule: CreateAwsCase. assignment group: "+ current.assignment_group);
+            var aws_account = new GlideRecord('x_195647_aws__accounts');
             aws_account.addQuery('assignment_group','=', current.assignment_group.sys_id);
             aws_account.query();
             if (aws_account.next() && aws_account.active) {
-                var new_aws_incident = createAwsCase(current, aws_account);
-                gs.info("Created new AWS Support case, Id: "+ new_aws_incident.case_id );
+                gs.info("Business Rule: CreateAwsCase. account: "+ aws_account.name);
+                var new_aws_support_case = createAwsCase(current, aws_account);
+                gs.info(
+                    "New AWS Support case Id: "+ new_aws_support_case.case_id +
+                    " For Incident: " + current.number
+                );
             }
         }
     })();
-})(current, previous);]]></script>
+})(current, previous);
+]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 01:59:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>504e2bebdb81230022367dda8c961927</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>CreateAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -113,7 +121,7 @@ function createAwsCase(incident, aws_account) {
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_504e2bebdb81230022367dda8c961927</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-16 05:14:41</sys_updated_on>
+        <sys_updated_on>2018-10-26 20:36:12</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

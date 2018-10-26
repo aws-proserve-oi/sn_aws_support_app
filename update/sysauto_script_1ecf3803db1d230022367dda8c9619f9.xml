@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>CreateAWSSupportChoices</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-10-26 10:15:06</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[gs.include('SupportApi');
+
+function insertChoice(choice, parent) {
+    var record = new GlideRecord('sys_choice');
+    record.initialize(); 
+    record.short_description = aws_case.subject;
+    record.description = aws_case.recentCommunications.communications[0].body;
+    record.caller_id = aws_account.assignment_user;
+    record.insert();
+    
+    return choice;    
+}
+
+function insertServiceChoices(service, parent) {
+    var choices = [];
+    
+    return choices;
+}
+
+(function() {
+    var aws_account = new GlideRecord('x_195647_aws__accounts');
+    aws_account.addQuery('active', 'true');
+    //aws_account.addQuery('aws_api_key','!=', '');
+    //aws_account.addQuery('secret_access_key','!=', '');
+    aws_account.query();
+    if (!aws_account.hasNext()) { 
+        gs.error("Error importing AWS Support Codes, one AWS account must be configured & active");
+        return false;
+    }
+
+    aws_account.next();
+    var creds = {
+        accessKeyId: String(aws_account.aws_api_key),
+        secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
+    };
+
+    AWSApi = new SupportApi(creds);
+    var services = AWSApi.describeServices();
+    gs.info("Services: " + JSON.stringify(services));
+
+    //create main category choice: AWS Support Case
+
+    var choice = {
+        label: "AWS Support Case",
+        value: "aws_support_case",
+        element: "category",
+        language: "en",
+        inactive: false,
+        sequence: 90
+    };
+    var incident_category = insertChoice(choice);
+
+    for (var s in services) {
+        var choices = insertServiceChoices(services[s], incident_category);
+        gs.info("Added Service: " + services[s].name);
+    }
+
+
+    // iterate first AWS account
+    // Get AWS Support Codes & Categories
+    // Iterate per code
+        // Create service code
+        // iterate service's categories
+            // create category choices
+
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-26 10:16:10</sys_created_on>
+        <sys_id>1ecf3803db1d230022367dda8c9619f9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CreateAWSSupportChoices</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sysauto_script_1ecf3803db1d230022367dda8c9619f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-26 13:27:07</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -12,7 +12,7 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>incident</collection>
-        <condition/>
+        <condition>current.incident_state &gt; 5</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
@@ -39,7 +39,7 @@ function closeAwsCase(caseId, aws_account) {
     var result = AWSApi.resolveCase(caseId);
 
     // update AWS Incidents table
-    var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+    var aws_incident = new GlideRecord('x_195647_aws__support_cases');
     aws_incident.addQuery('case_id','=', caseId);
     aws_incident.query();
     if (aws_incident.next()) {
@@ -52,14 +52,14 @@ function closeAwsCase(caseId, aws_account) {
 
 (function executeRule(current, previous) {
     (function() {
-        var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+        gs.info("Closing AWS Support Case "+current.number+' status '+current.incident_state);
+        var aws_incident = new GlideRecord('x_195647_aws__support_cases');
         aws_incident.addQuery('incident','=', current.sys_id);
         aws_incident.query();
         if (aws_incident.next()) {
             var aws_account = aws_incident.aws_account.getRefRecord();
             if (aws_account.active) {
                 if (current.incident_state > 5) {
-					gs.info("Closing AWS Support Case "+current.number+' status '+current.incident_state);
                     var result = closeAwsCase(aws_incident.case_id, aws_account);
                 }
             }
@@ -72,7 +72,7 @@ function closeAwsCase(caseId, aws_account) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a09944ffdbc1230022367dda8c9619d7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>ResolveAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -80,7 +80,7 @@ function closeAwsCase(caseId, aws_account) {
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_a09944ffdbc1230022367dda8c9619d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-17 09:58:09</sys_updated_on>
+        <sys_updated_on>2018-10-26 16:21:09</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
