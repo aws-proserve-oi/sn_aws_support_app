@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_195647_aws_.JournalUtils</api_name>
+        <client_callable>false</client_callable>
+        <description>Functions to interact with journal entries from the application scope.</description>
+        <name>JournalUtils</name>
+        <script><![CDATA[// Functions to interact with journal entries.
+var JournalUtils = Class.create();
+JournalUtils.prototype = {
+    initialize: function(){},
+
+    // receives a journal element (incident.comments),
+    // an object to add to the journal and a user to attribute the changes.
+    setJournalEntry: function(element, object, user) {
+      if (global.ScopedSetJournalEntry) {
+        journal = new global.ScopedSetJournalEntry();
+        journal.set(element, object, user);
+      } else {
+        gs.debug("Missing Global Script Include ScopedSetJournalEntry, case communications will be authored as admin.");
+        element.setDisplayValue(object);
+      }
+    },
+    // receives an instance of sys_journal_field 
+    // returns true if the entry was added by AWS.
+    created_by_aws: function(entry) {
+      var user_name;
+      if (global.ScopedSetJournalEntry && global.ScopedImpersonator) {
+        user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
+      } else {
+        user_name = 'admin';
+      }
+      if (entry.sys_created_by == user_name) {
+        return true;
+      }
+      return false;
+    },
+    //impersonate the AWS user from the application scope.
+    impersonate: function() {
+      if (global.ScopedImpersonator) {
+        var impersonator = new global.ScopedImpersonator();
+        return impersonator.impersonate_aws_user();
+      } else {
+        gs.debug("Missing Global Script Include ScopedImpersonator, case communications will be authored as admin.");
+      }
+    },
+
+    type: 'JournalUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-29 17:05:00</sys_created_on>
+        <sys_id>f12afd0cdb61230022367dda8c96190a</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>JournalUtils</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_script_include_f12afd0cdb61230022367dda8c96190a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-31 19:58:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

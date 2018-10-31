@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <condition/>
         <conditional>false</conditional>
         <name>UpdateAwsCases</name>
@@ -11,15 +11,28 @@
         <run_period>1970-01-01 00:00:10</run_period>
         <run_start>2018-10-16 04:04:59</run_start>
         <run_time>1970-01-01 08:00:00</run_time>
-        <run_type>periodically</run_type>
+        <run_type>on_demand</run_type>
         <script><![CDATA[gs.include('SupportApi');
+gs.include('JournalUtils');
 
-function getLastCommentTimeByUser(incident_id, user_name) {
+var aws_user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
+
+var aws_user = (function() {
+    gr = new GlideRecord('sys_user');
+    gr.addQuery('user_name', aws_user_name);
+    gr.query();
+    if (gr.hasNext()) {
+        gr.next();
+        return gr.sys_id;
+    }
+})();
+
+function getLastCommentTimeByUser(incident_id) {
     var timestamp;
     var activity = new GlideRecord('sys_journal_field');
     activity.addQuery('element_id','=', String(incident_id));
     activity.addQuery('element','=', "comments");
-    activity.addQuery('sys_created_by','=', user_name);
+    activity.addQuery('sys_created_by','=', aws_user_name);
     activity.orderByDesc('sys_created_on');
     activity.setLimit(1);
     activity.query();
@@ -39,7 +52,7 @@ function setIncidentState(incident, incident_case, aws_incident, aws_account) {
             break;
         case 'work-in-progress':
             incident.state = 2;
-            incident.assigned_to = aws_account.assignment_user;
+            incident.assigned_to = aws_user_name;
             break;
         case 'pending-customer-action':
             incident.state = 2;
@@ -47,19 +60,19 @@ function setIncidentState(incident, incident_case, aws_incident, aws_account) {
             break;
         case 'customer-action-completed':
             incident.state = 2;
-            incident.assigned_to = aws_account.assignment_user;
+            incident.assigned_to = aws_user_name;
             break;
         case 'opened':
             incident.state = 2;
-            incident.assigned_to = aws_account.assignment_user;
+            incident.assigned_to = aws_user_name;
             break;
         case 'resolved':
             incident.state = 6;
             //hardocded as there is no resolution code advertised by AWS
             incident.close_code = 'Resolved'; 
             incident.close_notes = 'Resolved by AWS';
-            incident.resolved_by = aws_account.assignment_user;
-            incident.assigned_to = aws_account.assignment_user;
+            incident.resolved_by = aws_user_name;
+            incident.assigned_to = aws_user_name;
             break;
         case 'reopened':
             incident.state = 1;
@@ -73,7 +86,7 @@ function setIncidentState(incident, incident_case, aws_incident, aws_account) {
 
 function getActiveCasesForAccount(aws_account) {
     var caseIdList = [];
-    var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+    var aws_incident = new GlideRecord('x_195647_aws__support_cases');
     aws_incident.addQuery('status','!=', 'closed');
     aws_incident.addQuery('aws_account','=', aws_account.sys_id);
     // should optimize query
@@ -103,7 +116,7 @@ function getActiveCasesForAccount(aws_account) {
 
 function updateCommunications(aws_incident, aws_account) {
     // get last remote update sync.
-    last_comment_time = getLastCommentTimeByUser(aws_incident.incident, 'admin');
+    last_comment_time = getLastCommentTimeByUser(aws_incident.incident);
 
     var params = {
         afterTime: last_comment_time,
@@ -115,14 +128,17 @@ function updateCommunications(aws_incident, aws_account) {
         accessKeyId: String(aws_account.aws_api_key),
         secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
     });
-    var comms = AwsApi.getCaseCommunications(params);
-    //gs.info("GET Case comms from "+last_comment_time+' for '+aws_incident.case_id+' cases '+JSON.stringify(comms));
+    var comms = AwsApi.getCaseCommunications(params).slice(0).reverse();
+    gs.info("GET Case comms from "+last_comment_time+' for '+aws_incident.case_id+' cases '+JSON.stringify(comms));
     //use this regexp to check the source of the comments the api provides.
-    var snow_user = new RegExp(aws_account.iam_user_name);
+    var snow_user = new RegExp(aws_account.iam_username);
     var incident = aws_incident.incident.getRefRecord();
+    var utils = new JournalUtils();
     if (incident.isNewRecord()) {return;}
     // update with a comment for each comment returned thats not created by user.
+    
     for (var c = 0; c < comms.length; c++) {
+        gs.info("COMM "+JSON.stringify(comms[c]));
         var comm = comms[c];
         if (comm.submittedBy.match(snow_user)) { return; }
         if (comm.attachmentSet.length > 0) {
@@ -135,13 +151,15 @@ function updateCommunications(aws_incident, aws_account) {
                 sa.writeBase64( incident, String(attachment.fileName), 'text/plain', String(attachment.data));
             }
         }
-        incident.autoSysFields(false);
-        incident.comments = comm.body;
-        incident.sys_updated_on = comm.timeCreated.substring(0,(comm.timeCreated.length-5)).replace("T", " ");
-        incident.sys_updated_by = aws_account.assignment_user.user_name;
+        //incident.autoSysFields(false);
+        var originalUser = utils.impersonate(aws_user);
+        utils.setJournalEntry(incident.comments, comm.body, comm.submittedBy);
+        
+        //incident.comments = comm.body;
         incident.update();
-        return incident;
+        utils.impersonate(originalUser);
     }
+    return incident;
 }
 
 function createNewIncidentRecord(aws_incident, aws_case, aws_account) {
@@ -160,18 +178,18 @@ function createNewIncidentRecord(aws_incident, aws_case, aws_account) {
     return new_incident;
 }
 
-(function AMSIncidentUpdater() {
-    var aws_account = new GlideRecord('x_195647_aws__x_195647_aws_account');
+(function() {
+    var aws_account = new GlideRecord('x_195647_aws__accounts');
     aws_account.addQuery();
     aws_account.query();
     while (aws_account.next()) {
         if (aws_account.active) {
-            gs.info("UPDATE from account: " + aws_account.environment_name);
+            //gs.info("UPDATE from account: " + aws_account.name);
             var aws_cases = getActiveCasesForAccount(aws_account);
             if (!aws_cases) {continue;}
             for (var i = 0; i < aws_cases.length; i++) {
                 var aws_case = aws_cases[i];
-                var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+                var aws_incident = new GlideRecord('x_195647_aws__support_cases');
                 aws_incident.addQuery('case_id','=', aws_case.caseId);
                 aws_incident.query();
                 while (aws_incident.next()) {
@@ -196,14 +214,14 @@ function createNewIncidentRecord(aws_incident, aws_case, aws_account) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 04:05:23</sys_created_on>
         <sys_id>a32bc433db05230022367dda8c961961</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>UpdateAwsCases</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysauto_script_a32bc433db05230022367dda8c961961</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-26 10:18:24</sys_updated_on>
+        <sys_updated_on>2018-10-31 20:01:59</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

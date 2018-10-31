@@ -12,7 +12,7 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>sys_journal_field</collection>
-        <condition>condition: current.element == 'comments'</condition>
+        <condition>current.element == 'comments'</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
@@ -30,26 +30,37 @@
         <script><![CDATA[//condition: current.element == 'comments'
 //gs.info("RUN - PushIncidentComments "+current.value);
 gs.include('SupportApi');
+gs.include('JournalUtils');
 (function executeRule(current, previous) {
     (function() {
-        var aws_incident = new GlideRecord('x_195647_aws__x_195647_aws_incidents');
+        var utils = new JournalUtils();
+        var aws_incident = new GlideRecord('x_195647_aws__support_cases');
         aws_incident.addQuery('incident','=', current.element_id);
         aws_incident.query();
         if (aws_incident.next() && aws_incident.aws_account.active) {
-            if (current.element == 'comments' &&
-                current.sys_created_by != 'admin') {
+            if (!utils.created_by_aws(current)) {
                 var incident = aws_incident.incident.getRefRecord();
                 var aws_account = aws_incident.aws_account.getRefRecord();
                 var creds = {
                     accessKeyId: String(aws_account.aws_api_key),
                     secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
                 };
-                var params = {
-                    caseId: String(aws_incident.case_id),
-                    communicationBody: String(current.value)
-                };
-                AMSApi = new SupportApi(creds);
-                var result = AMSApi.addCaseCommunications(params);
+                var user = new GlideRecord('sys_user');
+                user.addQuery('user_name', current.sys_created_by);
+                user.query();
+                if (user.hasNext()) {
+                    user.next();
+                    var communicationBody = current.value + '\n\n' +
+                                            'Submitted by ' +  user.first_name + " " +
+                                            user.last_name +
+                                            " <" + user.email + ">";
+                    var params = {
+                        caseId: String(aws_incident.case_id),
+                        communicationBody: communicationBody
+                    };
+                    AMSApi = new SupportApi(creds);
+                    var result = AMSApi.addCaseCommunications(params);
+                }
             }
         }
     })();
@@ -60,7 +71,7 @@ gs.include('SupportApi');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>22e1447bdbc1230022367dda8c9619dc</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>AddCaseCommunications</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -68,7 +79,7 @@ gs.include('SupportApi');
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_22e1447bdbc1230022367dda8c9619dc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-26 13:21:56</sys_updated_on>
+        <sys_updated_on>2018-10-31 20:38:38</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
