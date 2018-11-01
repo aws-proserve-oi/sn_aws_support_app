@@ -3,7 +3,7 @@
         <active>true</active>
         <condition/>
         <conditional>false</conditional>
-        <name>UpdateAwsCases</name>
+        <name>UpdateIncidents</name>
         <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
@@ -13,7 +13,7 @@
         <run_time>1970-01-01 08:00:00</run_time>
         <run_type>periodically</run_type>
         <script><![CDATA[gs.include('SupportApi');
-gs.include('JournalUtils');
+gs.include('IncidentUtils');
 
 var aws_user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
 
@@ -139,17 +139,7 @@ function updateCommunications(aws_incident, aws_account) {
         //gs.info("COMM "+JSON.stringify(comms[c]));
         var comm = comms[c];
         if (comm.submittedBy.match(snow_user)) { continue; }
-        if (comm.attachmentSet.length > 0) {
-            for (var a = 0; a < comm.attachmentSet.length; a++) {
-                params = {
-                    attachmentId: String(comm.attachmentSet[a].attachmentId)
-                };
-                attachment = AwsApi.describeAttachment(params).attachment;
-                var sa = new GlideSysAttachment();
-                sa.writeBase64( incident, String(attachment.fileName), 'text/plain', String(attachment.data));
-            }
-        }
-        var utils = new JournalUtils();
+        var utils = new IncidentUtils();
         utils.addAuthoredComment(incident,comm);
     }
     return incident;
@@ -207,14 +197,14 @@ function createNewIncidentRecord(aws_incident, aws_case, aws_account) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 04:05:23</sys_created_on>
         <sys_id>a32bc433db05230022367dda8c961961</sys_id>
-        <sys_mod_count>60</sys_mod_count>
-        <sys_name>UpdateAwsCases</sys_name>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>UpdateIncidents</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysauto_script_a32bc433db05230022367dda8c961961</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-01 01:46:19</sys_updated_on>
+        <sys_updated_on>2018-11-01 08:34:56</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

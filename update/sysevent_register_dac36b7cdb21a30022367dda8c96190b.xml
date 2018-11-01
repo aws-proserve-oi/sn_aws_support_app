@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description>Trigger an action</description>
+        <event_name>x_195647_aws_.PullAwsCases</event_name>
+        <fired_by>Custom event handler</fired_by>
+        <queue/>
+        <suffix>PullAwsCases</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-01 08:41:47</sys_created_on>
+        <sys_id>dac36b7cdb21a30022367dda8c96190b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_195647_aws_.PullAwsCases</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sysevent_register_dac36b7cdb21a30022367dda8c96190b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-01 10:50:38</sys_updated_on>
+        <table>x_195647_aws__accounts</table>
+    </sysevent_register>
+</record_update>

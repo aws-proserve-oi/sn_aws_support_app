@@ -2,17 +2,24 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_195647_aws_.JournalUtils</api_name>
+        <api_name>x_195647_aws_.IncidentUtils</api_name>
         <client_callable>false</client_callable>
         <description>Functions to interact with journal entries.</description>
-        <name>JournalUtils</name>
+        <name>IncidentUtils</name>
         <script><![CDATA[// Functions to interact with journal entries.
 gs.include('global.AwsSupportUtils');
-var JournalUtils = Class.create();
-JournalUtils.prototype = {
+var IncidentUtils = Class.create();
+IncidentUtils.prototype = {
 
     initialize: function(){
-      this.AwsSupportUtils = new global.AwsSupportUtils();
+        this.AwsSupportUtils = new global.AwsSupportUtils();
+        this.aws_user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
+        var gr = new GlideRecord('sys_user');
+        gr.addQuery('user_name', this.aws_user_name);
+        gr.query();
+        if (!gr.hasNext()) { throw "AWS Support user account is not setup.";}
+        gr.next();
+        this.aws_user = gr;
     },
 
     // receives a journal element (incident.comments),
@@ -26,7 +33,7 @@ JournalUtils.prototype = {
     // receives an instance of sys_journal_field 
     // returns true if the entry was added by AWS.
     createdByAws: function(entry) {
-      var user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
+      var user_name = this.aws_user_name;
       if (entry.sys_created_by == user_name) {
         return true;
       }
@@ -43,19 +50,113 @@ JournalUtils.prototype = {
       }
     },
 
-    type: 'JournalUtils'
+    // receives a GlideRecord object from support_cases table
+    // sets the associated incident state and assignee.
+    setIncidentState: function(aws_case) {
+        var incident = aws_case.incident.getRefRecord();
+        switch(aws_case.status) {
+            case 'unassigned':
+                incident.state = 1;
+                break;
+            case 'work-in-progress':
+                incident.state = 2;
+                incident.assigned_to = this.aws_user_name;
+                break;
+            case 'pending-customer-action':
+                incident.state = 2;
+                incident.assigned_to = 'NULL';
+                break;
+            case 'customer-action-completed':
+                incident.state = 2;
+                incident.assigned_to = this.aws_user_name;
+                break;
+            case 'opened':
+                incident.state = 2;
+                incident.assigned_to = this.aws_user_name;
+                break;
+            case 'resolved':
+                incident.state = 6;
+                //hardocded as there is no resolution code advertised by AWS
+                incident.close_code = 'Resolved'; 
+                incident.close_notes = 'Resolved by AWS';
+                incident.resolved_by = aws_user_name;
+                incident.assigned_to = aws_user_name;
+                break;
+            case 'reopened':
+                incident.state = 1;
+                break;
+        }
+        incident.update();
+        return incident;
+    },
+
+    severityCodeMap: { 
+        'low'     : {'impact': 3, 'urgency': 3},
+        'normal'  : {'impact': 2, 'urgency': 3},
+        'high'    : {'impact': 2, 'urgency': 2},
+        'urgent'  : {'impact': 1, 'urgency': 2},
+        'critical': {'impact': 1, 'urgency': 1}
+    },
+
+    setIncidentPriority: function(aws_case) {
+      gs.info("SEV CODE "+ aws_case.severity_code) ;
+        var incident = aws_case.incident.getRefRecord();
+        incident.impact = this.severityCodeMap[aws_case.severity_code]['impact'];
+        incident.urgency = this.severityCodeMap[aws_case.severity_code]['urgency'];
+        incident.update();
+        return incident;
+    },
+
+    caseIsOpen: function(aws_case) {
+        var case_record = new GlideRecord('x_195647_aws__support_cases');
+        case_record.addQuery('case_id','=', aws_case["caseId"]);
+        case_record.addQuery('status','!=', 'closed');
+        case_record.query();
+        if (case_record.hasNext()) {
+            return true;
+        }
+        return false;
+    },
+
+    createIncidentRecord: function(aws_case,aws_account) {
+        var new_case = new GlideRecord('x_195647_aws__support_cases');
+        new_case.initialize();
+        new_case.case_id = aws_case.caseId;
+        new_case.aws_account = aws_account.sys_id;
+        new_case.status = aws_case.status;
+        new_case.severity_code = aws_case.severityCode;
+        new_case.insert();
+        
+        var new_incident = new GlideRecord('incident');
+        new_incident.initialize(); 
+        new_incident.short_description = aws_case.subject;
+        new_incident.description = aws_case.recentCommunications.communications[0].body;
+        new_incident.caller_id = this.aws_user.sys_id;
+        new_incident.assignment_group = aws_account.assignment_group;
+        new_incident.x_195647_aws__service_category = aws_case.categoryCode;
+        new_incident.x_195647_aws__service_code = aws_case.serviceCode;
+        new_incident.insert();
+        
+        new_case.incident = new_incident.sys_id;
+        new_case.update();
+        new_incident = this.setIncidentState(new_case);
+        new_incident = this.setIncidentPriority(new_case);
+        return new_incident;
+    },
+
+    type: 'IncidentUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>JournalUtils</sys_name>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>IncidentUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-01 02:17:16</sys_updated_on>
+        <sys_updated_on>2018-11-01 13:03:02</sys_updated_on>
     </sys_script_include>
 </record_update>
