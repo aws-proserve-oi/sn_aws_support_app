@@ -40,6 +40,10 @@ gs.include('IncidentUtils');
         if (aws_incident.next() && aws_incident.aws_account.active) {
             if (!utils.createdByAws(current)) {
                 var incident = aws_incident.incident.getRefRecord();
+                if (incident.state >=6 ) {
+                    incident.state = 1;
+                    incident.update();
+                }
                 var aws_account = aws_incident.aws_account.getRefRecord();
                 var creds = {
                     accessKeyId: String(aws_account.aws_api_key),
@@ -71,7 +75,7 @@ gs.include('IncidentUtils');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>22e1447bdbc1230022367dda8c9619dc</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>AddCaseCommunications</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -79,7 +83,7 @@ gs.include('IncidentUtils');
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_22e1447bdbc1230022367dda8c9619dc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-01 08:34:05</sys_updated_on>
+        <sys_updated_on>2018-11-01 14:46:43</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

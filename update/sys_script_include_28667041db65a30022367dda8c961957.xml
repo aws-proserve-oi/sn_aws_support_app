@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_195647_aws_.copyToGlobalAwsSuportUtils</api_name>
+        <client_callable>false</client_callable>
+        <description>Copy this script include to the global scope with the name AwsSupportUtils, accessible from all application scopes.</description>
+        <name>copyToGlobalAwsSuportUtils</name>
+        <script><![CDATA[var AwsSupportUtils = Class.create();
+AwsSupportUtils.prototype = {
+    initialize: function() {
+        this.aws_user_name = gs.getProperty("x_195647_aws_.Config.AWS.username");
+        var gr = new GlideRecord('sys_user');
+        gr.addQuery('user_name', this.aws_user_name);
+        gr.query();
+        if (!gr.hasNext()) { throw "AWS Support user account is not setup.";}
+        gr.next();
+        this.aws_user = gr;
+    },
+
+    setJournalEntry: function(incident, object, user) {
+      var originalUser = gs.getSession().impersonate(this.aws_user.sys_id);
+      incident.comments.setJournalEntry(object, user);
+      incident.update();
+      gs.getSession().impersonate(originalUser);
+    },
+
+    type: 'AwsSupportUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-01 14:43:08</sys_created_on>
+        <sys_id>28667041db65a30022367dda8c961957</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>copyToGlobalAwsSuportUtils</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_script_include_28667041db65a30022367dda8c961957</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-01 14:44:30</sys_updated_on>
+    </sys_script_include>
+</record_update>
