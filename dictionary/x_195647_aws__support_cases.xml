@@ -6,13 +6,17 @@
         <element default="low" label="severityCode" max_length="255" name="severity_code" type="string"/>
         <element default="unassigned" label="Status" max_length="255" name="status" type="string"/>
         <index name="index">
-            <element name="aws_account"/>
+            <element name="incident"/>
         </index>
         <index name="index2">
             <element name="case_id"/>
+            <element name="incident"/>
         </index>
         <index name="index3">
-            <element name="incident"/>
+            <element name="aws_account"/>
+        </index>
+        <index name="index4">
+            <element name="case_id"/>
         </index>
     </element>
 </database>

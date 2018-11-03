@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Mappings for Severity code to Impact and Urgency for Incident Priotity.&#13;
+Modify accordinly.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_195647_aws_.Config.SeverityCodeMap</name>
+        <read_roles/>
+        <suffix>Config.SeverityCodeMap</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-02 13:49:08</sys_created_on>
+        <sys_id>55837d59db25e30022367dda8c9619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_195647_aws_.Config.SeverityCodeMap</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_properties_55837d59db25e30022367dda8c9619d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-02 13:49:08</sys_updated_on>
+        <type>string</type>
+        <value>{ &#13;
+    "low"     : {"impact": 3, "urgency": 3, "priority": 5},&#13;
+    "normal"  : {"impact": 2, "urgency": 3, "priority": 4},&#13;
+    "high"    : {"impact": 2, "urgency": 2, "priority": 3},&#13;
+    "urgent"  : {"impact": 1, "urgency": 2, "priority": 2},&#13;
+    "critical": {"impact": 1, "urgency": 1, "priority": 1}&#13;
+}</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=55837d59db25e30022367dda8c9619d9"/>
+</record_update>

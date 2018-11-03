@@ -2,11 +2,12 @@
     <element label="Accounts" max_length="40" name="x_195647_aws__accounts" type="collection">
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Assignment Group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
-        <element label="Automatically configure User and Group" max_length="40" name="auto_setup" type="boolean"/>
+        <element label="Automatically configure Group" max_length="40" name="auto_setup" type="boolean"/>
         <element label="AWS API Key" mandatory="true" max_length="20" name="aws_api_key" type="string"/>
         <element label="AWS Secret Key" mandatory="true" max_length="255" name="aws_secret_key" type="password2"/>
         <element default="snow_connector" label="IAM UserName" mandatory="true" max_length="255" name="iam_username" type="string"/>
         <element label="Account Name" mandatory="true" max_length="255" name="name" type="string"/>
+        <element label="Production" max_length="40" name="production" type="boolean"/>
         <index name="index">
             <element name="assignment_group"/>
         </index>
