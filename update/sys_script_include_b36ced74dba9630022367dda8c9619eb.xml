@@ -113,8 +113,6 @@ AwsSupportUtils.prototype = {
     setIncidentState: function(aws_case) {
         var incident = aws_case.incident.getRefRecord();
         incident.incident_state = this.StatusMap[aws_case.status]["IncidentState"];
-        gs.info("Set Incident State: " + this.StatusMap[aws_case.status]["IncidentState"] +
-                "Case Status: " + aws_case.status);
         if (this.StatusMap[aws_case.status]["IncidentAssignee"]) {
             if (this.StatusMap[aws_case.status]["IncidentAssignee"] == 'AWS') {
                 incident.assigned_to = this.aws_user_name;
@@ -191,6 +189,19 @@ AwsSupportUtils.prototype = {
             return digest;
         }
     },
+    getFirstCaseCommunication: function(aws_case_json) {
+        var comms = [];
+        if (aws_case_json.recentCommunications.communications.length >= 5) {
+            var params = {
+                "caseId": aws_case_json.caseId, 
+                "beforeTime": aws_case_json.timeCreated
+            };
+            comms = this.AwsSupportApi.getCaseCommunications(params);
+        } else {
+            comms = aws_case_json.recentCommunications.communications;
+        }
+        return comms.reverse()[0].body;
+    },
     // receives a Support case JSON from the AWS API
     // Creates the case reference record and the associated Incident.
     createIncidentRecord: function(aws_case_json) {
@@ -206,7 +217,7 @@ AwsSupportUtils.prototype = {
         var new_incident = new GlideRecord('incident');
         new_incident.initialize(); 
         new_incident.short_description = aws_case_json.subject;
-        new_incident.description = aws_case_json.recentCommunications.communications[0].body;
+        new_incident.description = this.getFirstCaseCommunication(aws_case_json);
         /*if (aws_case_json.status == 'reopened') {
             new_incident.description += this.generateCommDigest(new_case);
         }*/
@@ -395,13 +406,13 @@ AwsSupportUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 12:33:56</sys_updated_on>
+        <sys_updated_on>2018-11-06 13:17:28</sys_updated_on>
     </sys_script_include>
 </record_update>
