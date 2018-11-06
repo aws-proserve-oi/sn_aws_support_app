@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -29,19 +29,18 @@
         <role_conditions/>
         <script><![CDATA[gs.include('AwsSupportUtils');
 (function executeRule(current, previous) {
-    //gs.info("Closing AWS Support Case "+current.number+' status '+current.incident_state);
+    //gs.info("Closing AWS Support Case "+current.number+' status '+current.state);
     var aws_case = new GlideRecord('x_195647_aws__support_cases');
     aws_case.addQuery('incident','=', current.sys_id);
     aws_case.query();
-    if (aws_case.hasNext()) {
-        aws_case.next();
+    if (aws_case.next() && aws_case.aws_account.active) {
         var utils = new AwsSupportUtils(aws_case.aws_account.getRefRecord());
         var resolved = [];
         var resolved_states = ['resolved', 'closed'];
         for (var r in resolved_states) {
-          resolved.push([utils.StatusMap[resolved_states[r]]['IncidentState']]);
+          resolved.push(Number([utils.StatusMap[resolved_states[r]]['IncidentState']]));
         }
-        if (resolved.indexOf(current.incident_state) > -1) {
+        if (resolved.indexOf(Number(current.state)) > -1) {
             utils.closeAwsCase(aws_case);
         }
     }
@@ -53,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a09944ffdbc1230022367dda8c9619d7</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>ResolveAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -61,7 +60,7 @@
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_a09944ffdbc1230022367dda8c9619d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-03 22:20:01</sys_updated_on>
+        <sys_updated_on>2018-11-06 15:33:39</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

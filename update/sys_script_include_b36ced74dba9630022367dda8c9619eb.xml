@@ -22,7 +22,7 @@ AwsSupportUtils.prototype = {
         var user_record = new GlideRecord('sys_user');
         user_record.addQuery('user_name', this.aws_user_name);
         user_record.query();
-        if (!user_record.hasNext()) { throw "AWS Support user account is not setup. Configure one account with auto_setup enabled.";}
+        //if (!user_record.hasNext()) { throw "AWS Support user account is not setup. Configure one account with auto_setup enabled.";}
         user_record.next();
         this.aws_user = user_record;
         this.StatusMap = JSON.parse(gs.getProperty("x_195647_aws_.Config.StatusMap"));
@@ -214,7 +214,7 @@ AwsSupportUtils.prototype = {
         new_case.status = aws_case_json.status;
         new_case.severity_code = aws_case_json.severityCode;
         new_case.insert();
-        gs.info('inserted case reference recrod: ' + new_case.case_id);
+        //gs.info('inserted case reference recrod: ' + new_case.case_id);
         
         var new_incident = new GlideRecord('incident');
         new_incident.initialize(); 
@@ -228,7 +228,7 @@ AwsSupportUtils.prototype = {
         new_incident.x_195647_aws__service_category = aws_case_json.categoryCode;
         new_incident.x_195647_aws__service_code = aws_case_json.serviceCode;
         new_incident.insert();
-        gs.info('inserted incident recrod: ' + new_incident.number +" " + new_incident.caller_id);
+        //gs.info('inserted incident recrod: ' + new_incident.number +" " + new_incident.caller_id);
         
         new_case.incident = new_incident.sys_id;
         new_case.update();
@@ -241,15 +241,15 @@ AwsSupportUtils.prototype = {
     closeAwsCase: function(aws_case) {
         // update AWS Incidents table
         var incident = aws_case.incident.getRefRecord();
-        switch(incident.state) {
-            case this.StatusMap['resolved']['IncidentState']:
+        switch(Number(incident.state)) {
+            case Number(this.StatusMap['resolved']['IncidentState']):
                 aws_case.status = 'resolved';
                 break;
-            case this.StatusMap['closed']['IncidentState']:
+            case Number(this.StatusMap['closed']['IncidentState']):
                 aws_case.status = 'closed';
         }
         aws_case.update();
-        var result = this.AwsSupportApi.resolveCase(caseId);
+        var result = this.AwsSupportApi.resolveCase(aws_case.case_id);
         return result;
     },
     // returns a list of active AWS Support Case ids for the current account.
@@ -407,13 +407,13 @@ AwsSupportUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>94</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 14:47:53</sys_updated_on>
+        <sys_updated_on>2018-11-06 15:33:19</sys_updated_on>
     </sys_script_include>
 </record_update>
