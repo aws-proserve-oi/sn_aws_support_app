@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -27,11 +27,11 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[/*gs.info(
-    "Run CreateAwsCase BR - Incident Number: "+ current.number + "\n"
-    "ServiceCode: "+ current.x_195647_aws_service_code +
-    " Category: " + current.x_195647_aws__service_category 
-);*/
+        <script><![CDATA[//gs.info(
+//    "Run CreateAwsCase BR - Incident Number: "+ current.number + "\n" +
+//    "ServiceCode: "+ current.x_195647_aws_service_code +
+//    " Category: " + current.x_195647_aws__service_category 
+//);
 gs.include('AwsSupportUtils');
 (function executeRule(current, previous) {
     var group = current.assignment_group.getRefRecord();
@@ -55,7 +55,7 @@ gs.include('AwsSupportUtils');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>504e2bebdb81230022367dda8c961927</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>CreateAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -63,7 +63,7 @@ gs.include('AwsSupportUtils');
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_504e2bebdb81230022367dda8c961927</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-03 22:48:03</sys_updated_on>
+        <sys_updated_on>2018-11-06 16:28:27</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
