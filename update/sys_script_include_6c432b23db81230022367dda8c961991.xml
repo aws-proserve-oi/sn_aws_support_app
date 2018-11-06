@@ -2,10 +2,10 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_195647_aws_.AWSSignUtil</api_name>
+        <api_name>x_195647_aws_.AwsSignUtil</api_name>
         <client_callable>false</client_callable>
         <description>AWS Auth V4 Signature Utility</description>
-        <name>AWSSignUtil</name>
+        <name>AwsSignUtil</name>
         <script><![CDATA[/******/ (function(modules) { // webpackBootstrap
 /******/  // The module cache
 /******/  var installedModules = {};
@@ -52,16 +52,16 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-  /* WEBPACK VAR INJECTION */(function(global) {var AWSSignUtil = __webpack_require__(1);
+  /* WEBPACK VAR INJECTION */(function(global) {var AwsSignUtil = __webpack_require__(1);
 
-  global.AWSSignUtil = AWSSignUtil;
+  global.AwsSignUtil = AwsSignUtil;
   /* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-  /* WEBPACK VAR INJECTION */(function(Buffer, process) {var AWSSignUtil = exports,
+  /* WEBPACK VAR INJECTION */(function(Buffer, process) {var AwsSignUtil = exports,
       url = __webpack_require__(7),
       querystring = __webpack_require__(14),
       crypto = __webpack_require__(17),
@@ -379,9 +379,9 @@
     return path + '?' + encodeRfc3986(querystring.stringify(query))
   }
 
-  AWSSignUtil.RequestSigner = RequestSigner
+  AwsSignUtil.RequestSigner = RequestSigner
 
-  AWSSignUtil.sign = function(request, credentials) {
+  AwsSignUtil.sign = function(request, credentials) {
     return new RequestSigner(request, credentials).sign()
   }
 
@@ -10424,13 +10424,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 01:12:23</sys_created_on>
         <sys_id>6c432b23db81230022367dda8c961991</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>AWSSignUtil</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AwsSignUtil</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_6c432b23db81230022367dda8c961991</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-16 01:12:23</sys_updated_on>
+        <sys_updated_on>2018-11-03 19:41:26</sys_updated_on>
     </sys_script_include>
 </record_update>

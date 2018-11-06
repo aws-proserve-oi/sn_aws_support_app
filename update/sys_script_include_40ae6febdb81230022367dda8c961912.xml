@@ -2,14 +2,14 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_195647_aws_.SupportApi</api_name>
+        <api_name>x_195647_aws_.AwsSupportApi</api_name>
         <client_callable>false</client_callable>
         <description/>
-        <name>SupportApi</name>
+        <name>AwsSupportApi</name>
         <script><![CDATA[gs.include('SignUtil');
-var SupportApi = Class.create();
+var AwsSupportApi = Class.create();
 
-SupportApi.prototype = {
+AwsSupportApi.prototype = {
     
     initialize: function(creds) {
         this.creds    = creds;
@@ -123,7 +123,7 @@ SupportApi.prototype = {
         }*/
         var response = this._execute_request(params, 'AddAttachmentsToSet');
         if (response) {
-            return response;
+            return response.attachmentSetId;
         }
     },
 
@@ -153,7 +153,7 @@ SupportApi.prototype = {
 
     _execute_request: function(params, action) {
         var opts = {
-            service : 'support', // 'AWSSupport_20130415.',
+            service : 'support',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-amz-json-1.1',
@@ -163,7 +163,7 @@ SupportApi.prototype = {
         };
         opts.headers['X-Amz-Target'] += action;
         opts.body = JSON.stringify(params);
-        var signature = AWSSignUtil.sign(opts, this.creds);
+        var signature = AwsSignUtil.sign(opts, this.creds);
         var request = new sn_ws.RESTMessageV2();
         request.setHttpMethod(opts.method);
         request.setEndpoint(this.endpoint);
@@ -173,15 +173,15 @@ SupportApi.prototype = {
         request.setRequestHeader('X-Amz-Date', signature.headers['X-Amz-Date']);
         request.setRequestHeader('User-Agent', signature.headers['User-Agent']);
         request.setRequestBody(opts.body);
-        //gs.info("PARAMS: "+JSON.stringify(opts.body));
+        //gs.info("API REQ PARAMS: "+JSON.stringify(opts.body));
         var response = request.execute();
         if (response.haveError()) {
-            gs.error("AWS request error." +
+            gs.error("AWS API request error." +
                 " Error Code: " + response.getErrorCode() +
                 " Message: " + response.getErrorMessage() +
                 " Status Code: "+ response.getStatusCode() +
                 " Response Body: "+ response.getBody());
-            return null;
+            throw response.getErrorCode;
         } else {
             return JSON.parse(response.getBody());
         }
@@ -195,19 +195,19 @@ SupportApi.prototype = {
     },
 
 
-    type: 'SupportApi'
+    type: 'AwsSupportApi'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 02:00:46</sys_created_on>
         <sys_id>40ae6febdb81230022367dda8c961912</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>SupportApi</sys_name>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>AwsSupportApi</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_40ae6febdb81230022367dda8c961912</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-01 14:51:51</sys_updated_on>
+        <sys_updated_on>2018-11-03 21:27:09</sys_updated_on>
     </sys_script_include>
 </record_update>
