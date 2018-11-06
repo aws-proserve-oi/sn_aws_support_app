@@ -9,7 +9,13 @@
         <element label="Account Name" mandatory="true" max_length="255" name="name" type="string"/>
         <element label="Production" max_length="40" name="production" type="boolean"/>
         <index name="index">
+            <element name="aws_api_key"/>
+        </index>
+        <index name="index2">
             <element name="assignment_group"/>
+        </index>
+        <index name="index3">
+            <element name="name"/>
         </index>
     </element>
 </database>

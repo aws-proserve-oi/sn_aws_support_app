@@ -5,6 +5,306 @@
             <element>x_195647_aws__service_code</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Account Management</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d69d0fadbe9e70022367dda8c9619d8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:54</sys_updated_on>
+            <value>account-management</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Alexa for Business</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>006990fadbe9e70022367dda8c96191e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:44</sys_updated_on>
+            <value>alexa-for-business</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Alexa Services</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>24e8d47adbe9e70022367dda8c961955</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:46</sys_updated_on>
+            <value>alexa-services</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Certificate Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bab85c3adbe9e70022367dda8c9619d9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:28</sys_updated_on>
+            <value>amazon-acm-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AppStream</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cfd8547adbe9e70022367dda8c9619c5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:32</sys_updated_on>
+            <value>amazon-appstream</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AppStream 2.0</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fdc8107adbe9e70022367dda8c9619b9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:50</sys_updated_on>
+            <value>amazon-appstream2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Artifact</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06c8107adbe9e70022367dda8c9619e4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:52</sys_updated_on>
+            <value>amazon-artifact</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Athena</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd3a9872db2de70022367dda8c961965</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:00</sys_updated_on>
+            <value>amazon-athena</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Batch</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fbd8947adbe9e70022367dda8c961959</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:39</sys_updated_on>
+            <value>amazon-batch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudFront</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>01e8d47adbe9e70022367dda8c9619d3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:50</sys_updated_on>
+            <value>amazon-cloudfront</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudSearch </label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>562a9072db2de70022367dda8c96190d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:27</sys_updated_on>
+            <value>amazon-cloudsearch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudWatch</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cfb89c3adbe9e70022367dda8c961919</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:30</sys_updated_on>
+            <value>amazon-cloudwatch</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CodeBuild</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c6e8187adbe9e70022367dda8c96197c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:56</sys_updated_on>
+            <value>amazon-codebuild</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cognito</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6a4a14b2db2de70022367dda8c9619fa</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:30:08</sys_updated_on>
+            <value>amazon-cognito</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Database Migration Service</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a5910fadbe9e70022367dda8c961944</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:26</sys_updated_on>
+            <value>amazon-database-migration-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>DynamoDB</label>
             <language>en</language>
             <name>incident</name>
@@ -19,6 +319,26 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-10-16 04:58:21</sys_updated_on>
             <value>amazon-dynamodb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic Block Store (EBS)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>656914fadbe9e70022367dda8c96192a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:55</sys_updated_on>
+            <value>amazon-elastic-block-store</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -45,7 +365,267 @@
             <element>x_195647_aws__service_code</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Amazon Machine Learning</label>
+            <label>Elastic Compute Cloud (EC2 - Windows)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c49d8badbe9e70022367dda8c961950</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:42</sys_updated_on>
+            <value>amazon-elastic-compute-cloud-windows</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic File System</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a2991c3edbe9e70022367dda8c961936</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:44</sys_updated_on>
+            <value>amazon-elastic-file-system</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic MapReduce (EMR)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a84a10b2db2de70022367dda8c961925</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:40</sys_updated_on>
+            <value>amazon-elastic-mapreduce</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic Transcoder</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3ac910bedbe9e70022367dda8c961909</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:34</sys_updated_on>
+            <value>amazon-elastic-transcoder</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ElastiCache</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b7c8907adbe9e70022367dda8c961995</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:05</sys_updated_on>
+            <value>amazon-elasticache</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elasticsearch Service</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4a3ad872db2de70022367dda8c961906</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:05</sys_updated_on>
+            <value>amazon-elasticsearch-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Glacier</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d87918fadbe9e70022367dda8c9619a1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:20</sys_updated_on>
+            <value>amazon-glacier</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Greengrass</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30c8dc3adbe9e70022367dda8c9619c0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:43</sys_updated_on>
+            <value>amazon-greengrass</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Kinesis Streams</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1fd9d4bedbe9e70022367dda8c9619f2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:07</sys_updated_on>
+            <value>amazon-kinesis</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Kinesis Analytics</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>40e958bedbe9e70022367dda8c96195a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:13</sys_updated_on>
+            <value>amazon-kinesis-analytics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Kinesis Firehose</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8e8d47adbe9e70022367dda8c961994</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:47</sys_updated_on>
+            <value>amazon-kinesis-firehose</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lex</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9039d4badbe9e70022367dda8c961976</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:06</sys_updated_on>
+            <value>amazon-lex</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lightsail</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86d8147adbe9e70022367dda8c9619a2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:23</sys_updated_on>
+            <value>amazon-lightsail</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Machine Learning</label>
             <language>en</language>
             <name>incident</name>
             <sequence/>
@@ -55,10 +635,2370 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d8915437db05230022367dda8c96194c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:08:50</sys_updated_on>
+            <value>amazon-machine-learning</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Marketplace</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e8c8dc3adbe9e70022367dda8c961988</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-10-16 04:34:58</sys_updated_on>
-            <value>amazon-machine-learning</value>
+            <sys_updated_on>2018-11-06 23:16:42</sys_updated_on>
+            <value>amazon-marketplace</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mechanical Turk</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c679d8fadbe9e70022367dda8c961954</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:35</sys_updated_on>
+            <value>amazon-mechanical-turk</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MQ</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a6791cfadbe9e70022367dda8c961924</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:40</sys_updated_on>
+            <value>amazon-mq</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OpsWorks for Chef Automate</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c3b89c3adbe9e70022367dda8c961907</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:29</sys_updated_on>
+            <value>amazon-opsworks-chef-automate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pinpoint</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c4998badbe9e70022367dda8c9619c1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:36</sys_updated_on>
+            <value>amazon-pinpoint</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Polly</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ae8187adbe9e70022367dda8c9619a4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:58</sys_updated_on>
+            <value>amazon-polly</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>QuickSight</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>513a1872db2de70022367dda8c9619c1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:54</sys_updated_on>
+            <value>amazon-quicksight</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Redshift</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f72a5472db2de70022367dda8c9619b2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:44</sys_updated_on>
+            <value>amazon-redshift</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (Aurora - MySQL-compatible)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>880a98fedbe9e70022367dda8c961986</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:06</sys_updated_on>
+            <value>amazon-relational-database-service-aurora</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (Aurora - PostgreSQL-compatible)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f70ad032db2de70022367dda8c961930</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:36</sys_updated_on>
+            <value>amazon-relational-database-service-aurora-postgres</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (MariaDB)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>beb85c3adbe9e70022367dda8c9619b1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:28</sys_updated_on>
+            <value>amazon-relational-database-service-mariadb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (MySQL)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b995c3edbe9e70022367dda8c961966</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:54</sys_updated_on>
+            <value>amazon-relational-database-service-mysql</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (Oracle)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a53918badbe9e70022367dda8c961996</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:17</sys_updated_on>
+            <value>amazon-relational-database-service-oracle</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (PostgreSQL)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>afb89c3adbe9e70022367dda8c96197e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:33</sys_updated_on>
+            <value>amazon-relational-database-service-postgresql</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Route 53</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3e2994badbe9e70022367dda8c961944</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:54</sys_updated_on>
+            <value>amazon-route53</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Server Migration Service (Linux)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>57495cbadbe9e70022367dda8c9619b5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:02</sys_updated_on>
+            <value>amazon-servermigration-linux</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Server Migration Service (Windows)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9bd8947adbe9e70022367dda8c96190f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:35</sys_updated_on>
+            <value>amazon-servermigration-windows</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple Email Service (SES)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cde9d8bedbe9e70022367dda8c96192a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:20</sys_updated_on>
+            <value>amazon-simple-email-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple Notification Service (SNS)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b41950badbe9e70022367dda8c96193a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:05</sys_updated_on>
+            <value>amazon-simple-notification-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple Queue Service (SQS)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7cb9947edbe9e70022367dda8c961900</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:42</sys_updated_on>
+            <value>amazon-simple-queue-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple Storage Service (S3)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f19d0badbe9e70022367dda8c9619e8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:31</sys_updated_on>
+            <value>amazon-simple-storage-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Simple Workflow Service (SWF)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>16c9dc7edbe9e70022367dda8c961921</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:29</sys_updated_on>
+            <value>amazon-simple-workflow-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SimpleDB</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d10a9cfedbe9e70022367dda8c96190c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:20</sys_updated_on>
+            <value>amazon-simpledb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Virtual Private Cloud (VPC)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a5c8107adbe9e70022367dda8c961975</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:48</sys_updated_on>
+            <value>amazon-virtual-private-cloud</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>VPN</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6eb9187edbe9e70022367dda8c9619b3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:56</sys_updated_on>
+            <value>amazon-virtual-private-network</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Workspaces (Windows)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3559dcbadbe9e70022367dda8c9619b8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:22</sys_updated_on>
+            <value>amazon-workspaces</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>X Ray</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d8d990bedbe9e70022367dda8c961967</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:43</sys_updated_on>
+            <value>amazon-xray</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>API Gateway</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>48c9d87edbe9e70022367dda8c96197e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:13</sys_updated_on>
+            <value>api-gateway</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AppSync</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d7795cfadbe9e70022367dda8c961973</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:48</sys_updated_on>
+            <value>appsync</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Auto Scaling</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ecd8d07adbe9e70022367dda8c961944</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:11</sys_updated_on>
+            <value>auto-scaling</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Application Discovery Service (Linux)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd3918badbe9e70022367dda8c961921</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:12</sys_updated_on>
+            <value>aws-application-discovery-linux</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Application Discovery Service (Windows)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d2954badbe9e70022367dda8c961901</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:41</sys_updated_on>
+            <value>aws-application-discovery-windows</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudHSM</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2bd8947adbe9e70022367dda8c961934</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:37</sys_updated_on>
+            <value>aws-cloud-hsm</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudFormation</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7869d0fadbe9e70022367dda8c961926</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:50</sys_updated_on>
+            <value>aws-cloudformation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Data Pipeline</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>84c8dc3adbe9e70022367dda8c96190a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:37</sys_updated_on>
+            <value>aws-data-pipeline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Direct Connect</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>28599cbadbe9e70022367dda8c9619c9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:12</sys_updated_on>
+            <value>aws-direct-connect</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic Beanstalk</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f54a90b2db2de70022367dda8c9619d4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:57</sys_updated_on>
+            <value>aws-elastic-beanstalk</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Glue</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1fd8547adbe9e70022367dda8c9619ea</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:33</sys_updated_on>
+            <value>aws-glue</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Health</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>752954badbe9e70022367dda8c961998</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:46</sys_updated_on>
+            <value>aws-health</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Identity and Access Management (IAM) </label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>54e8947adbe9e70022367dda8c9619fe</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:43</sys_updated_on>
+            <value>aws-identity-and-access-management</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Import Export (Disk)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e51ad432db2de70022367dda8c9619a5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:51</sys_updated_on>
+            <value>aws-import</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Snowball</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58c8dc3adbe9e70022367dda8c96192a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:38</sys_updated_on>
+            <value>aws-import-export-snowball</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inspector</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5b2a1472db2de70022367dda8c961926</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:37</sys_updated_on>
+            <value>aws-inspector</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IoT</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5a89503edbe9e70022367dda8c9619f4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:14:41</sys_updated_on>
+            <value>aws-iot</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IoT Analytics</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>07a9d07edbe9e70022367dda8c96198d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:29</sys_updated_on>
+            <value>aws-iot-analytics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lambda</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6b89d43edbe9e70022367dda8c96199c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:21</sys_updated_on>
+            <value>aws-lambda</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OpsWorks Stacks</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26c8507adbe9e70022367dda8c961955</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:56</sys_updated_on>
+            <value>aws-opsworks</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Organizations</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0d9d0bedbe9e70022367dda8c961940</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:47</sys_updated_on>
+            <value>aws-organizations</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Relational Database Service (SQL Server)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1cd8d07adbe9e70022367dda8c961909</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:09</sys_updated_on>
+            <value>aws-relational-database-service-sql-server</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Shield</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5319d0badbe9e70022367dda8c96196a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:25</sys_updated_on>
+            <value>aws-shield</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Step Functions</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9aa9907edbe9e70022367dda8c961907</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:19</sys_updated_on>
+            <value>aws-step-functions</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trusted Advisor</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37b9d87edbe9e70022367dda8c96191c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:09</sys_updated_on>
+            <value>aws-trusted-advisor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WAF</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bb499cbadbe9e70022367dda8c961902</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:05</sys_updated_on>
+            <value>aws-web-application-firewall</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Billing</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>67b89c3adbe9e70022367dda8c96199f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:34</sys_updated_on>
+            <value>billing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Chime</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>60a9dc3edbe9e70022367dda8c961963</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:06</sys_updated_on>
+            <value>chime</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cloud9</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69b9d47edbe9e70022367dda8c96197c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:49</sys_updated_on>
+            <value>cloud9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CloudTrail</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>33a9147edbe9e70022367dda8c961981</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:35</sys_updated_on>
+            <value>cloudtrail</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CodeStar</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4fc8507adbe9e70022367dda8c9619de</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:00</sys_updated_on>
+            <value>code-star</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CodeCommit</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c36994fadbe9e70022367dda8c96197d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:09</sys_updated_on>
+            <value>codecommit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CodeDeploy</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6319d0badbe9e70022367dda8c96199b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:27</sys_updated_on>
+            <value>codedeploy</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CodePipeline</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c1a5432db2de70022367dda8c96192e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:43</sys_updated_on>
+            <value>codepipeline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Comprehend</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>36b81c3adbe9e70022367dda8c961950</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:27</sys_updated_on>
+            <value>comprehend</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Config Service</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b9a9507edbe9e70022367dda8c961918</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:14</sys_updated_on>
+            <value>config-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Connect (Contact Center)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8e3958badbe9e70022367dda8c96191c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:23</sys_updated_on>
+            <value>connect</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Account</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>820adcfedbe9e70022367dda8c96194e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:25</sys_updated_on>
+            <value>customer-account</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DCV (Desktop Cloud Visualization)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d999983edbe9e70022367dda8c961927</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:35</sys_updated_on>
+            <value>dcv-desktop-cloud-visualization</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Device Farm</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>93b89c3adbe9e70022367dda8c96195e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:32</sys_updated_on>
+            <value>device-farm</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Directory Service</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b00a1cfedbe9e70022367dda8c9619b9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:14</sys_updated_on>
+            <value>directory-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Distributed Denial of Service (DDoS)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2bc8907adbe9e70022367dda8c961977</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:04</sys_updated_on>
+            <value>distributed-denial-of-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DynamoDB Accelerator (DAX)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0a99c3edbe9e70022367dda8c96198e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:01</sys_updated_on>
+            <value>dynamodb-accelerator</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Container Service (ECS)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b199d83edbe9e70022367dda8c961909</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:38</sys_updated_on>
+            <value>ec2-container-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Educate</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ec8507adbe9e70022367dda8c961900</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:53</sys_updated_on>
+            <value>educate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elastic Load Balancing (ELB)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>562954badbe9e70022367dda8c9619e8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:50</sys_updated_on>
+            <value>elastic-load-balancing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fargate</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>472ad072db2de70022367dda8c96198c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:33</sys_updated_on>
+            <value>fargate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FreeRTOS</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6d1950badbe9e70022367dda8c9619eb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:12</sys_updated_on>
+            <value>freertos</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GameLift</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4959dcbadbe9e70022367dda8c961922</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:16</sys_updated_on>
+            <value>gamelift</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>General Info and Getting Started</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9df914fedbe9e70022367dda8c96196b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:50</sys_updated_on>
+            <value>general-info</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GuardDuty</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ec8507adbe9e70022367dda8c961928</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:54</sys_updated_on>
+            <value>guardduty</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IoT 1-Click</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dc99183edbe9e70022367dda8c9619a1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:27</sys_updated_on>
+            <value>iot-1-click</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IoT Device Management</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6f5950fadbe9e70022367dda8c96199d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:39</sys_updated_on>
+            <value>iot-device-management</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Key Management Service</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4e6914fadbe9e70022367dda8c9619e9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:00</sys_updated_on>
+            <value>key-management-service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Kinesis Video Streams</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>631a1c32db2de70022367dda8c96193e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:07</sys_updated_on>
+            <value>kinesis-video-streams</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lambda@Edge</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b3e950fedbe9e70022367dda8c96193f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:38</sys_updated_on>
+            <value>lambda-edge</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lumberyard</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>102a5c32db2de70022367dda8c9619bb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:28:13</sys_updated_on>
+            <value>lumberyard</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MediaConvert</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3b3a9c72db2de70022367dda8c9619b2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:30</sys_updated_on>
+            <value>mediaconvert</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MediaLive</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>961990badbe9e70022367dda8c96199f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:17</sys_updated_on>
+            <value>medialive</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MediaPackage</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ad8147adbe9e70022367dda8c9619e3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:26</sys_updated_on>
+            <value>mediapackage</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MediaStore</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ad954bedbe9e70022367dda8c961983</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:58</sys_updated_on>
+            <value>mediastore</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MediaTailor</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9dd8147adbe9e70022367dda8c961906</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:18</sys_updated_on>
+            <value>mediatailor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Migration Hub</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c4d8907adbe9e70022367dda8c9619d7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:07</sys_updated_on>
+            <value>migration-hub</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mobile Analytics </label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>91c8107adbe9e70022367dda8c96195a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:47</sys_updated_on>
+            <value>mobile-analytics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mobile Hub</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>faf9d4fedbe9e70022367dda8c9619e9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:57</sys_updated_on>
+            <value>mobile-hub</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Neptune</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dbb9587edbe9e70022367dda8c9619c9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:01</sys_updated_on>
+            <value>neptune</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OpsWorks for Puppet Enterprise</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fe791cfadbe9e70022367dda8c961996</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:43</sys_updated_on>
+            <value>opsworks-puppet-enterprise</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SageMaker</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1bc8507adbe9e70022367dda8c9619fd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:01</sys_updated_on>
+            <value>sagemaker</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Secrets Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:07:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d21a5832db2de70022367dda8c961967</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:27:57</sys_updated_on>
+            <value>secrets-manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AMS - Provisioning Request</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6dd8147adbe9e70022367dda8c96194e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:21</sys_updated_on>
+            <value>sentinel-provisioning-request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AMS - Report Incident</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5dd914bedbe9e70022367dda8c961936</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:25:53</sys_updated_on>
+            <value>sentinel-report-incident</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AMS - Service Request</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81d8d07adbe9e70022367dda8c9619ba</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:15</sys_updated_on>
+            <value>sentinel-service-request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Serverless Application Repository</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1889dcfadbe9e70022367dda8c96190f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:54</sys_updated_on>
+            <value>serverless-application-repository</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Service Catalog</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e2d8547adbe9e70022367dda8c96194b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:29</sys_updated_on>
+            <value>service-catalog</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Deadline</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c73a1c72db2de70022367dda8c9619ea</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:29:17</sys_updated_on>
+            <value>service-deadline</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DeepLens</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>51c8107adbe9e70022367dda8c961924</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:46</sys_updated_on>
+            <value>service-deeplens</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>EKS (Container Service for Kubernetes)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9989103edbe9e70022367dda8c961933</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:00</sys_updated_on>
+            <value>service-eks</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Service Limit Increase</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aae8187adbe9e70022367dda8c9619e0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:59</sys_updated_on>
+            <value>service-limit-increase</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Macie</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5bb89c3adbe9e70022367dda8c961947</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:31</sys_updated_on>
+            <value>service-macie</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sumerian</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>557998fadbe9e70022367dda8c96192d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:29</sys_updated_on>
+            <value>service-sumerian</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WorkSpaces (Linux)</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3cd8d07adbe9e70022367dda8c96198c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:14</sys_updated_on>
+            <value>service-workspaces-linux</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Single Sign-On</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>faa9d07edbe9e70022367dda8c96191f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:24:25</sys_updated_on>
+            <value>single-sign-on</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Support API</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fe89543edbe9e70022367dda8c96195a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:13</sys_updated_on>
+            <value>support-api</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Systems Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>133998badbe9e70022367dda8c961950</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:20:32</sys_updated_on>
+            <value>systems-manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Systems Manager for Microsoft SCVMM</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:02:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>04e8947adbe9e70022367dda8c961995</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:17:41</sys_updated_on>
+            <value>systems-manager-for-microsoft-scvmm</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Transcribe</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:01:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>28c8dc3adbe9e70022367dda8c96196a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:16:41</sys_updated_on>
+            <value>transcribe</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Translate</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:05:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1789943edbe9e70022367dda8c9619a7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:23:17</sys_updated_on>
+            <value>translate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>vCenter Management Portal</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:06:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>acf990fedbe9e70022367dda8c9619f4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:26:44</sys_updated_on>
+            <value>vcenter-management-portal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WorkMail</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:03:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>132994badbe9e70022367dda8c9619cc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:19:59</sys_updated_on>
+            <value>workmail</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WorkSpaces Application Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e769d4fadbe9e70022367dda8c96194a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:22:13</sys_updated_on>
+            <value>workspaces-application-manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WorkDocs</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:04:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>325950fadbe9e70022367dda8c961906</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:21:33</sys_updated_on>
+            <value>zocalo</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>x_195647_aws__service_code</element>

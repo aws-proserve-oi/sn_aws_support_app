@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>name</col_name_string>
+        <index_col_name element="name" name="x_195647_aws__accounts">ee8a5d8fdb1d230022367dda8c961906</index_col_name>
+        <logical_table_name>x_195647_aws__accounts</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-11-06 22:12:23</sys_created_on>
+        <sys_id>707d48fedba9e70022367dda8c9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_195647_aws__accounts</sys_name>
+        <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+        <sys_update_name>sys_index_x_195647_aws__accounts_name</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-11-06 22:12:23</sys_updated_on>
+        <table display_value="Accounts" name="x_195647_aws__accounts">16a1d9cbdb1d230022367dda8c9619fb</table>
+        <unique_index>true</unique_index>
+    </sys_index>
+</record_update>

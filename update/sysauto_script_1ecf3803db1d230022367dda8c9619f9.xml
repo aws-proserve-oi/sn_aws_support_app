@@ -12,30 +12,44 @@
         <run_start>2018-10-26 10:15:06</run_start>
         <run_time>1970-01-01 08:00:00</run_time>
         <run_type>on_demand</run_type>
-        <script><![CDATA[gs.include('SupportApi');
+        <script><![CDATA[gs.include("AwsSupportApi");
 
-function insertChoice(choice, parent) {
-    var record = new GlideRecord('sys_choice');
-    record.initialize(); 
-    record.short_description = aws_case.subject;
-    record.description = aws_case.recentCommunications.communications[0].body;
-    record.caller_id = aws_account.assignment_user;
-    record.insert();
-    
-    return choice;    
+function insertServiceChoices(service) {
+    gs.info("SERVICE " + JSON.stringify(service));
+    var service_choice = insertChoice(service, "x_195647_aws__service_code");
+    for (var c in service["categories"]) {
+        var category_choice = insertChoice(service["categories"][c], "x_195647_aws__service_category", service["code"]);
+    }
 }
 
-function insertServiceChoices(service, parent) {
-    var choices = [];
-    
-    return choices;
+function insertChoice(object, element, dependent_value) {
+    var choice = new GlideRecord("sys_choice");
+    choice.addQuery("element", element);
+    if (dependent_value) {
+        choice.addQuery("dependent_value", dependent_value);
+    }
+    choice.addQuery("value", object["code"]);
+    choice.query();
+    if (choice.hasNext()) {
+        choice.next();
+    } else {
+        choice.initialize();
+    }
+    choice.inactive= false;
+    choice.value   = object["code"];
+    choice.label   = object["name"];
+    choice.element = element;
+    choice.name   = 'incident';
+    if (dependent_value) {
+        choice.dependent_value = dependent_value;
+    }
+    choice.update();
+    gs.info('inserted choice' + choice.sys_id + ' ' + choice.value + " " + choice.dependent_value + " ERROR " + choice.getLastErrorMessage());
 }
 
 (function() {
-    var aws_account = new GlideRecord('x_195647_aws__accounts');
-    aws_account.addQuery('active', 'true');
-    //aws_account.addQuery('aws_api_key','!=', '');
-    //aws_account.addQuery('secret_access_key','!=', '');
+    var aws_account = new GlideRecord("x_195647_aws__accounts");
+    aws_account.addQuery("active", "true");
     aws_account.query();
     if (!aws_account.hasNext()) { 
         gs.error("Error importing AWS Support Codes, one AWS account must be configured & active");
@@ -48,48 +62,50 @@ function insertServiceChoices(service, parent) {
         secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
     };
 
-    AWSApi = new SupportApi(creds);
+    AWSApi = new AwsSupportApi(creds);
     var services = AWSApi.describeServices();
-    gs.info("Services: " + JSON.stringify(services));
+    //gs.info("Services: " + JSON.stringify(services));
 
-    //create main category choice: AWS Support Case
-
-    var choice = {
-        label: "AWS Support Case",
-        value: "aws_support_case",
-        element: "category",
-        language: "en",
-        inactive: false,
-        sequence: 90
-    };
-    var incident_category = insertChoice(choice);
+    /*{
+        "code": "comprehend", 
+        "name": "Comprehend", 
+        "categories": [
+            {
+                "code": "other", 
+                "name": "Other"
+            }, 
+            {
+                "code": "feature-request", 
+                "name": "Feature Request"
+            }, 
+            {
+                "code": "api", 
+                "name": "API"
+            }, 
+            {
+                "code": "general-guidance", 
+                "name": "General Guidance"
+            }
+        ]
+    },*/ 
 
     for (var s in services) {
-        var choices = insertServiceChoices(services[s], incident_category);
+        insertServiceChoices(services[s]);
         gs.info("Added Service: " + services[s].name);
     }
-
-
-    // iterate first AWS account
-    // Get AWS Support Codes & Categories
-    // Iterate per code
-        // Create service code
-        // iterate service's categories
-            // create category choices
-
 })();]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-26 10:16:10</sys_created_on>
         <sys_id>1ecf3803db1d230022367dda8c9619f9</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>CreateAWSSupportChoices</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysauto_script_1ecf3803db1d230022367dda8c9619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-26 13:27:07</sys_updated_on>
+        <sys_updated_on>2018-11-06 23:26:10</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
