@@ -32,18 +32,19 @@ AwsSupportUtils.prototype = {
     // Writes an authored comment in the incident journal.
     addAuthoredComment: function(incident, comm) {
       if (comm.attachmentSet.length > 0) {
-        this.addAttachments(incident, comm);
+        this.addAttachments(incident, comm.attachmentSet);
       }
       this.AwsSupportUtils.setJournalEntry(incident, comm.body, comm.submittedBy);
     },
     // writes an attachment for an incident.
     // receives an incident glide record and an AWS case attachment set.
     addAttachments: function(incident, attachmentSet) {
-      for (var a = 0; a < attachmentSet.length; a++) {
+      for (var a in attachmentSet) {
           params = {
-              attachmentId: String(attachmentSet[a].attachmentId)
+              attachmentId: attachmentSet[a].attachmentId
           };
           var attachment = this.AwsSupportApi.describeAttachment(params).attachment;
+          var sa = new GlideSysAttachment();
           sa.writeBase64( incident, String(attachment.fileName), 'text/plain', String(attachment.data));
       }
     },
@@ -63,12 +64,19 @@ AwsSupportUtils.prototype = {
         };
         
         var attachmentSetId = this.AwsSupportApi.addAttachmentsToSet(params);
-        var author = user.first_name + " "  +
-                     user.last_name  + " <" + 
-                     user.email      + ">";
+        var author = '';
+        var user = new GlideRecord('sys_user');
+        user.addQuery('user_name', attachment.sys_created_by);
+        user.query();
+        if (user.next()) {
+            author = ' added by ';
+            author += user.first_name + " "  +
+                      user.last_name  + " <" + 
+                      user.email      + ">";            
+        }
         params = {
             caseId: String(aws_case.case_id),
-            communicationBody: 'New attachment ' + attachment.file_name + ' added by ' + author,
+            communicationBody: 'New attachment ' + attachment.file_name + author,
             attachmentSetId: attachmentSetId
         };
         var result = this.AwsSupportApi.addCaseCommunications(params);
@@ -407,13 +415,13 @@ AwsSupportUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>111</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 15:33:19</sys_updated_on>
+        <sys_updated_on>2018-11-06 16:19:19</sys_updated_on>
     </sys_script_include>
 </record_update>
