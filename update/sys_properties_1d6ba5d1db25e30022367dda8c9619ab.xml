@@ -12,25 +12,27 @@ Change the settings here to the values of the statuses used in your Incident pro
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-02 13:45:53</sys_created_on>
         <sys_id>1d6ba5d1db25e30022367dda8c9619ab</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>x_195647_aws_.Config.StatusMap</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_properties_1d6ba5d1db25e30022367dda8c9619ab</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 12:32:58</sys_updated_on>
+        <sys_updated_on>2018-11-06 14:42:24</sys_updated_on>
         <type>string</type>
         <value>{&#13;
   "unassigned" : {&#13;
-    "IncidentState": 1&#13;
+    "IncidentState": 1,&#13;
+    "IncidentAssignee":"NULL"&#13;
   },&#13;
   "work-in-progress": {&#13;
     "IncidentState": 2,&#13;
     "IncidentAssignee":"AWS"&#13;
   },&#13;
   "pending-customer-action": {&#13;
-    "IncidentState": 2&#13;
+    "IncidentState": 1,&#13;
+    "IncidentAssignee": "NULL"&#13;
   },&#13;
   "customer-action-completed": {&#13;
     "IncidentState": 2,&#13;
@@ -45,7 +47,8 @@ Change the settings here to the values of the statuses used in your Incident pro
     "IncidentAssignee":"AWS"&#13;
   },&#13;
   "reopened": {&#13;
-    "IncidentState": 1&#13;
+    "IncidentState": 1,&#13;
+    "IncidentAssignee":"NULL"&#13;
   },&#13;
   "closed": {&#13;
     "IncidentState": 7&#13;

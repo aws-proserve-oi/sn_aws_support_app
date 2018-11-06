@@ -112,20 +112,21 @@ AwsSupportUtils.prototype = {
     // sets the associated incident state and assignee.
     setIncidentState: function(aws_case) {
         var incident = aws_case.incident.getRefRecord();
-        incident.incident_state = this.StatusMap[aws_case.status]["IncidentState"];
+        incident.state = Number(this.StatusMap[aws_case.status]["IncidentState"]);
         if (this.StatusMap[aws_case.status]["IncidentAssignee"]) {
             if (this.StatusMap[aws_case.status]["IncidentAssignee"] == 'AWS') {
                 incident.assigned_to = this.aws_user_name;
             } else {
-                incident.assigned_to = this.StatusMap[aws_case.status]["IncidentAssignee"];
+                incident.assigned_to = "";
             }            
         }
-        if (this.StatusMap[aws_case.status]["IncidentState"] == this.StatusMap['resolved']["IncidentState"]) {
+        if (incident.state == this.StatusMap['resolved']["IncidentState"]) {
             incident.close_code = 'Resolved'; 
             incident.close_notes = 'Resolved remotely.';
             incident.resolved_by = this.aws_user_name;
         }
-        incident.update();
+        var result = incident.update();
+        //gs.info("UPDATE ERROR " + incident.getLastErrorMessage());
         return incident;
     },
 
@@ -218,9 +219,9 @@ AwsSupportUtils.prototype = {
         new_incident.initialize(); 
         new_incident.short_description = aws_case_json.subject;
         new_incident.description = this.getFirstCaseCommunication(aws_case_json);
-        /*if (aws_case_json.status == 'reopened') {
+        if (aws_case_json.status == 'reopened') {
             new_incident.description += this.generateCommDigest(new_case);
-        }*/
+        }
         new_incident.caller_id = this.aws_user.sys_id;
         new_incident.assignment_group = this.aws_account.assignment_group;
         new_incident.x_195647_aws__service_category = aws_case_json.categoryCode;
@@ -239,7 +240,7 @@ AwsSupportUtils.prototype = {
     closeAwsCase: function(aws_case) {
         // update AWS Incidents table
         var incident = aws_case.incident.getRefRecord();
-        switch(incident.incident_state) {
+        switch(incident.state) {
             case this.StatusMap['resolved']['IncidentState']:
                 aws_case.status = 'resolved';
                 break;
@@ -328,7 +329,6 @@ AwsSupportUtils.prototype = {
         if (aws_case.hasNext()) {
             aws_case.next();
             if (aws_case.status != aws_case_json.status) {
-                gs.info('estamos locos');
                 aws_case.status = aws_case_json.status;
                 aws_case.update();
             }
@@ -406,13 +406,13 @@ AwsSupportUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>72</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 13:17:28</sys_updated_on>
+        <sys_updated_on>2018-11-06 14:41:05</sys_updated_on>
     </sys_script_include>
 </record_update>
