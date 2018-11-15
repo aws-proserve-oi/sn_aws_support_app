@@ -805,6 +805,26 @@
             <element>x_195647_aws__service_code</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Rekognition</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8f4a54b2db2de70022367dda8c9619f7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:47:58</sys_updated_on>
+            <value>amazon-rekognition</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Relational Database Service (Aurora - MySQL-compatible)</label>
             <language>en</language>
             <name>incident</name>
@@ -1659,6 +1679,26 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-11-06 23:24:19</sys_updated_on>
             <value>aws-step-functions</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Storage Gateway</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ff4ad4b2db2de70022367dda8c961971</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:48:13</sys_updated_on>
+            <value>aws-storage-gateway</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -2559,6 +2599,26 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-11-06 23:27:57</sys_updated_on>
             <value>secrets-manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_195647_aws__service_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AMS - Change Request</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <sys_class_name>sys_choice</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-06 23:08:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>985a18b2db2de70022367dda8c961999</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-06 23:48:28</sys_updated_on>
+            <value>sentinel-change-request</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

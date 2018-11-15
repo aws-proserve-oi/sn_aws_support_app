@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true,query_hints=true,hasWorkflow=true,live_feed=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="12" text_index="true" type="collection">
+    <element attributes="email_client=true,query_hints=true,hasWorkflow=true,live_feed=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="13" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="3" dependent="x_195647_aws__service_code" dependent_on_field="x_195647_aws__service_code" label="Category" max_length="40" name="x_195647_aws__service_category" type="string" use_dependent_field="true">
             <choice>
                 <element dependent_value="distributed-denial-of-service" inactive_on_update="false" label="Abuse Complaint" value="abuse-complaint"/>
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="Access" value="service-access"/>
                 <element dependent_value="connect" inactive_on_update="false" label="Access and Permissions" value="access-permissions"/>
                 <element dependent_value="serverless-application-repository" inactive_on_update="false" label="Access and Permissions" value="access-and-permissions"/>
+                <element dependent_value="service-sumerian" inactive_on_update="false" label="Access and Permissions" value="access-and-permissions"/>
                 <element dependent_value="amazon-elastic-file-system" inactive_on_update="false" label="Access Issue" value="access-issue"/>
                 <element dependent_value="sentinel-report-incident" inactive_on_update="false" label="Access Issues" value="access-issues"/>
                 <element dependent_value="educate" inactive_on_update="false" label="Account Access Issues" value="account-access-issues"/>
@@ -15,21 +16,31 @@
                 <element dependent_value="customer-account" inactive_on_update="false" label="Activation" value="activation"/>
                 <element dependent_value="aws-step-functions" inactive_on_update="false" label="Activities" value="activities"/>
                 <element dependent_value="mediatailor" inactive_on_update="false" label="Ad Server Issue" value="ad-server-issue"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Administration - Basic" value="administration-basic"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Agent Issues" value="agent-issues"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="Alarms" value="alarms"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Alexa for Business" value="service-code-alexa-for-business"/>
                 <element dependent_value="aws-step-functions" inactive_on_update="false" label="Amazon States Language" value="language"/>
                 <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="Amazon WAM Client" value="wam-client"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="AMI Copy" value="ami-copy"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="AMI Copy" value="ami-copy"/>
                 <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="Analytics" value="analytics"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="Analytics and Metrics" value="analytics-and-metrics"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Apache" value="apache"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Apache" value="apache"/>
+                <element dependent_value="secrets-manager" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="aws-organizations" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="opsworks-puppet-enterprise" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="guardduty" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="translate" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="migration-hub" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="service-macie" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="dynamodb-accelerator" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="comprehend" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="aws-glue" inactive_on_update="false" label="API" value="api"/>
                 <element dependent_value="aws-application-discovery-windows" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="API" value="api"/>
+                <element dependent_value="ec2-container-service" inactive_on_update="false" label="API / SDK / CLI" value="api-sdk-cli"/>
                 <element dependent_value="codepipeline" inactive_on_update="false" label="API / SDK / CLI" value="api-sdk-cli"/>
                 <element dependent_value="api-gateway" inactive_on_update="false" label="API Cache" value="api-cache"/>
                 <element dependent_value="api-gateway" inactive_on_update="false" label="API Configuration" value="api-configuration"/>
@@ -43,36 +54,77 @@
                 <element dependent_value="medialive" inactive_on_update="false" label="API/SDK" value="api-sdk"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="API/SDK" value="api-sdk"/>
                 <element dependent_value="aws-iot" inactive_on_update="false" label="API/SDK" value="api-sdk"/>
+                <element dependent_value="alexa-for-business" inactive_on_update="false" label="API/SDK" value="api-sdk"/>
+                <element dependent_value="mobile-hub" inactive_on_update="false" label="API/SDK" value="apis"/>
+                <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="API/SDK" value="api-sdk"/>
                 <element dependent_value="mediaconvert" inactive_on_update="false" label="API/SDK Issues" value="api-sdk-issues"/>
+                <element dependent_value="iot-device-management" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="aws-health" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="directory-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="aws-inspector" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="mobile-analytics" inactive_on_update="false" label="APIs" value="api"/>
+                <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="code-star" inactive_on_update="false" label="APIs" value="api"/>
                 <element dependent_value="aws-elastic-beanstalk" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-simpledb" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-virtual-private-network" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="aws-cloudformation" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="aws-identity-and-access-management" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-kinesis" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="aws-direct-connect" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-simple-queue-service" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-kinesis-firehose" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="aws-web-application-firewall" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="kinesis-video-streams" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-elasticsearch-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="aws-import" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-polly" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="sagemaker" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="codedeploy" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-elastic-file-system" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-codebuild" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-appstream" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-mechanical-turk" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-opsworks-chef-automate" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="mediatailor" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-route53" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-cloudsearch" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="alexa-services" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-glacier" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="codecommit" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-elastic-block-store" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="aws-data-pipeline" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="support-api" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-xray" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-simple-workflow-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-redshift" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="cloudtrail" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-simple-notification-service" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-kinesis-analytics" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="key-management-service" inactive_on_update="false" label="APIs" value="apis"/>
+                <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="amazon-cognito" inactive_on_update="false" label="APIs" value="api"/>
                 <element dependent_value="elastic-load-balancing" inactive_on_update="false" label="APIs" value="apis"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Application Auto Scaling (Other than EC2 ASGs)" value="application-auto-scaling-limits"/>
@@ -88,6 +140,7 @@
                 <element dependent_value="appsync" inactive_on_update="false" label="Architectural Guidance/Best Practices" value="architectural-guidance-best-practices"/>
                 <element dependent_value="service-deeplens" inactive_on_update="false" label="Architectural Guidance/Best Practices" value="architectural-guidance-best-practices"/>
                 <element dependent_value="amazon-glacier" inactive_on_update="false" label="Archive Issue" value="archive-issue"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Asset Configuration Update" value="asset-configuration-update"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Athena" value="athena-limits"/>
                 <element dependent_value="aws-identity-and-access-management" inactive_on_update="false" label="Authentication Issue" value="authentication-issue"/>
                 <element dependent_value="key-management-service" inactive_on_update="false" label="Authorization Issue" value="authorization-issue"/>
@@ -97,7 +150,9 @@
                 <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="AWS Marketplace for Desktop Apps" value="marketplace-for-desktop-apps"/>
                 <element dependent_value="lumberyard" inactive_on_update="false" label="AWS Resource Access &amp; Permissions" value="resource-access-permissions"/>
                 <element dependent_value="lumberyard" inactive_on_update="false" label="AWS Resource Management" value="resource-management"/>
+                <element dependent_value="service-sumerian" inactive_on_update="false" label="AWS SDK" value="sdk"/>
                 <element dependent_value="api-gateway" inactive_on_update="false" label="Back-End Endpoint Integration" value="backend-endpoint-integration"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Backup Configuration" value="backup-configuration"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Batch" value="aws-batch"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Bounces / Complaints / Blacklists" value="bounces-complaints-blacklists"/>
                 <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="Bring Your Own Application" value="bring-your-own-app"/>
@@ -114,6 +169,7 @@
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="Certificate Revocation" value="certificate-revocation"/>
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="Certificates" value="certificates"/>
                 <element dependent_value="customer-account" inactive_on_update="false" label="Change Account Details" value="change-account-details"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Change Notification - Other" value="change-notification-other"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="Channel in Recovering State" value="channel-in-degraded-state"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="Channel Input" value="channel-input"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="Channel Output" value="channel-output"/>
@@ -122,6 +178,7 @@
                 <element dependent_value="billing" inactive_on_update="false" label="Charge Inquiry" value="charge-inquiry"/>
                 <element dependent_value="chime" inactive_on_update="false" label="Chat" value="chat"/>
                 <element dependent_value="secrets-manager" inactive_on_update="false" label="CLI Issue" value="cli-issue"/>
+                <element dependent_value="key-management-service" inactive_on_update="false" label="CLI Issue" value="cli-issue"/>
                 <element dependent_value="service-deadline" inactive_on_update="false" label="Client Application Operation" value="application-operation"/>
                 <element dependent_value="dcv-desktop-cloud-visualization" inactive_on_update="false" label="Client issues" value="client-issues"/>
                 <element dependent_value="amazon-kinesis-firehose" inactive_on_update="false" label="Client Library" value="client-library"/>
@@ -157,32 +214,56 @@
                 <element dependent_value="appsync" inactive_on_update="false" label="Configuration Guidance" value="configuration-guidance"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Connect" value="connect-limits"/>
                 <element dependent_value="amazon-virtual-private-network" inactive_on_update="false" label="Connection Establishment" value="connection-establishment"/>
+                <element dependent_value="aws-direct-connect" inactive_on_update="false" label="Connection Issue" value="connection-issue"/>
                 <element dependent_value="amazon-workspaces" inactive_on_update="false" label="Connection Issue" value="connection-issue"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="Connection Issue" value="connection-issue"/>
                 <element dependent_value="service-workspaces-linux" inactive_on_update="false" label="Connection Issues " value="connection-issues"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="Connectivity" value="connectivity"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="amazon-redshift" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="systems-manager-for-microsoft-scvmm" inactive_on_update="false" label="Connectivity" value="connectivity"/>
                 <element dependent_value="aws-import-export-snowball" inactive_on_update="false" label="Connectivity Issue" value="connectivity-issue"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="Consistency and Lifecycle Rules" value="lifecycle-rules"/>
+                <element dependent_value="vcenter-management-portal" inactive_on_update="false" label="Console" value="console"/>
+                <element dependent_value="config-service" inactive_on_update="false" label="Console" value="console"/>
                 <element dependent_value="amazon-cognito" inactive_on_update="false" label="Console" value="console"/>
                 <element dependent_value="transcribe" inactive_on_update="false" label="Console" value="console"/>
+                <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="Console" value="console"/>
+                <element dependent_value="iot-device-management" inactive_on_update="false" label="Console" value="console"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="Console" value="console"/>
                 <element dependent_value="aws-health" inactive_on_update="false" label="Console" value="console"/>
+                <element dependent_value="cloudtrail" inactive_on_update="false" label="Console" value="console"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="Console" value="console"/>
+                <element dependent_value="alexa-for-business" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="iot-1-click" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="aws-web-application-firewall" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="aws-iot" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="amazon-kinesis-analytics" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="mobile-hub" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="aws-inspector" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="amazon-artifact" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="sagemaker" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="mediastore" inactive_on_update="false" label="Console Issue" value="console-issue"/>
+                <element dependent_value="codepipeline" inactive_on_update="false" label="Console Issue" value="console-issue"/>
                 <element dependent_value="code-star" inactive_on_update="false" label="Console Issues" value="console-issues"/>
                 <element dependent_value="mediaconvert" inactive_on_update="false" label="Console Issues" value="console-issues"/>
+                <element dependent_value="amazon-simple-queue-service" inactive_on_update="false" label="Console Issues" value="console-issues"/>
                 <element dependent_value="aws-organizations" inactive_on_update="false" label="Console Specific" value="console-specific"/>
                 <element dependent_value="service-macie" inactive_on_update="false" label="Console Specific" value="console-specific"/>
+                <element dependent_value="dynamodb-accelerator" inactive_on_update="false" label="Console Specific" value="console-specific"/>
                 <element dependent_value="migration-hub" inactive_on_update="false" label="Console Specific" value="console-specific"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Consolidated Billing" value="consolidated-billing-limits"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Consolidated Billing" value="consolidated-billing"/>
@@ -196,6 +277,7 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Container Services (ECS)" value="container-services-limit"/>
                 <element dependent_value="customer-account" inactive_on_update="false" label="Convert EC2 Classic to VPC" value="convert-ec2-classic-to-vpc"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Cookbook Guidance" value="cookbook-guidance"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Coordinated Change" value="coordinated-change"/>
                 <element dependent_value="connect" inactive_on_update="false" label="Country Whitelisting for Outbound Calls" value="country-whitelisting-outbound-calls"/>
                 <element dependent_value="educate" inactive_on_update="false" label="Credit Inquiry" value="credit-inquiry"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Credits &amp; Promotions" value="credits-and-promotions"/>
@@ -208,15 +290,25 @@
                 <element dependent_value="aws-import-export-snowball" inactive_on_update="false" label="Data Inconsistency" value="data-inconsistency"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Data Pipeline" value="data-pipeline-limit-increase"/>
                 <element dependent_value="general-info" inactive_on_update="false" label="Data Privacy Query" value="gdpr-queries"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="Database Issue" value="database-issue"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="Database Issue" value="database-issue"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="Database Issue" value="database-issue"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="service-deadline" inactive_on_update="false" label="Database Issue" value="database-issues"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="Database Issue" value="database-issue"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="Database Issue" value="database-issue"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Database Migration Service" value="dms-limits"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Datasource - Database" value="datasource-database"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Datasource - S3" value="datasource-s3"/>
                 <element dependent_value="amazon-quicksight" inactive_on_update="false" label="Datasource Issues" value="datasource-issues"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Dedicated Host - Launch Issue" value="dedicated-host-launch-issue"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Dedicated Host - Launch Issue" value="dedicated-host-launch-issue"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Dedicated Host - Licensing Issue" value="dedicated-host-licensing-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Dedicated Host - Licensing Issue" value="dedicated-host-licensing-issue"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Delivery Failure" value="delivery-failure"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Deployment Issue" value="deployment-issue"/>
                 <element dependent_value="codedeploy" inactive_on_update="false" label="Deployment Issue" value="deployment-issue"/>
@@ -237,6 +329,7 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Direct Connect" value="direct-connect-limits"/>
                 <element dependent_value="directory-service" inactive_on_update="false" label="Directory Issue" value="directory-issue"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Directory Service" value="directory-service-limits"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Disk Configuration" value="disk-configurations"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Disk Configuration" value="disk-configurations"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Dispute a Charge" value="dispute-charge"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="Distribution Issue" value="distribution-issue"/>
@@ -248,6 +341,8 @@
                 <element dependent_value="service-deeplens" inactive_on_update="false" label="Documentation" value="documentation"/>
                 <element dependent_value="appsync" inactive_on_update="false" label="Documentation" value="documentation"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="Documentation" value="documentation"/>
+                <element dependent_value="aws-web-application-firewall" inactive_on_update="false" label="Documentation" value="documentation"/>
+                <element dependent_value="amazon-mq" inactive_on_update="false" label="Documentation" value="documentation"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="Domain &amp; User Administration" value="domain-and-user-administration"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Domain / Email Verification" value="domain-email-verification"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="Domain Blacklisting" value="domain-blacklisting"/>
@@ -268,6 +363,7 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="EC2 Instances" value="ec2-instances"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="EC2 Reserved Instance Purchase Instances" value="ec2-reserved-purchase-instances"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="EC2 Reserved Instance Sales" value="ec2-reserved-instance-seller"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="EC2 Run Command" value="ec2-run-command"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="EC2 Run Command" value="ec2-run-command"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="EC2 Spot Fleet Scaling" value="ec2-spot-fleet-scaling"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="EC2 Spot Instances" value="ec2-spot-instances"/>
@@ -285,67 +381,145 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Elasticsearch Service" value="elasticsearch-limits"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Email Issue" value="email-issue"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="Email Issue" value="email-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Email Services" value="email-services"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Email Services" value="email-services"/>
                 <element dependent_value="key-management-service" inactive_on_update="false" label="Encryption SDK" value="encryption-sdk"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="Encryption/DRM" value="encryption-drm"/>
                 <element dependent_value="service-catalog" inactive_on_update="false" label="End User Console" value="end-user-console"/>
+                <element dependent_value="cloud9" inactive_on_update="false" label="Environment issue" value="environment-issue"/>
                 <element dependent_value="aws-elastic-beanstalk" inactive_on_update="false" label="Environment Issue" value="environment-issue"/>
+                <element dependent_value="aws-iot" inactive_on_update="false" label="Environment Issue" value="environment-issue"/>
                 <element dependent_value="sentinel-provisioning-request" inactive_on_update="false" label="Environment Retirement" value="environment-retirement"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Environment Verification" value="environment-verification"/>
                 <element dependent_value="lambda-edge" inactive_on_update="false" label="Errors and Performance" value="errors-performance"/>
+                <element dependent_value="api-gateway" inactive_on_update="false" label="Errors and Performance Issues" value="performance-issue"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="Events" value="event"/>
                 <element dependent_value="aws-step-functions" inactive_on_update="false" label="Executions" value="executions"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Fargate" value="service-code-fargate"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="systems-manager-for-microsoft-scvmm" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="single-sign-on" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="fargate" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="kinesis-video-streams" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="service-sumerian" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="ec2-container-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-inspector" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="zocalo" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="vcenter-management-portal" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="sagemaker" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-athena" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-kinesis" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-artifact" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="alexa-for-business" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="gamelift" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-batch" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-glacier" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="secrets-manager" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-workspaces" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="service-workspaces-linux" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-mechanical-turk" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="translate" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-kinesis-analytics" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-route53" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="codedeploy" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="key-management-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="codecommit" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-data-pipeline" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-organizations" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elastic-block-store" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="comprehend" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="guardduty" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="service-catalog" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="serverless-application-repository" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="transcribe" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-direct-connect" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elastic-file-system" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-servermigration-linux" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-kinesis-firehose" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="connect" inactive_on_update="false" label="Feature Request" value="feature-requests"/>
+                <element dependent_value="cloud9" inactive_on_update="false" label="Feature request" value="feature-request"/>
                 <element dependent_value="amazon-elasticache" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-quicksight" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="alexa-services" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="service-macie" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="mobile-hub" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-cloud-hsm" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-elastic-beanstalk" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elasticsearch-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-shield" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="elastic-load-balancing" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-cloudformation" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="api-gateway" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-import" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="service-deadline" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="lumberyard" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="cloudtrail" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="directory-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-redshift" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-trusted-advisor" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="service-eks" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-simple-notification-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-opsworks-chef-automate" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-application-discovery-windows" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="mediatailor" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="dynamodb-accelerator" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-iot" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-cognito" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="migration-hub" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-cloudsearch" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-identity-and-access-management" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="opsworks-puppet-enterprise" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="support-api" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-xray" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-lambda" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="code-star" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="iot-1-click" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="mobile-analytics" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-health" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="iot-device-management" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-simple-workflow-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-codebuild" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-appstream" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="config-service" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-step-functions" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="codepipeline" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="aws-glue" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="mediastore" inactive_on_update="false" label="Feature Request" value="feature-request"/>
                 <element dependent_value="amazon-servermigration-windows" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="aws-web-application-firewall" inactive_on_update="false" label="Feature Request" value="feature-request"/>
+                <element dependent_value="amazon-simple-queue-service" inactive_on_update="false" label="Feature Requests" value="feature-requests"/>
                 <element dependent_value="lambda-edge" inactive_on_update="false" label="Feature Requests" value="feature-requests"/>
                 <element dependent_value="aws-import-export-snowball" inactive_on_update="false" label="Feature Requests" value="feature-requests"/>
                 <element dependent_value="freertos" inactive_on_update="false" label="Feature/Documentation Request" value="feature-documentation-request"/>
@@ -356,55 +530,135 @@
                 <element dependent_value="freertos" inactive_on_update="false" label="FreeRTOS Device Libraries" value="freertos-device-libraries"/>
                 <element dependent_value="freertos" inactive_on_update="false" label="FreeRTOS Kernel" value="freertos-kernel"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="FTP" value="ftp"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="FTP" value="ftp"/>
                 <element dependent_value="gamelift" inactive_on_update="false" label="Game Sessions" value="game-sessions"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="GameLift" value="gamelift-limits"/>
                 <element dependent_value="gamelift" inactive_on_update="false" label="GameLift SDK" value="gamelift-sdk"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="Gateway Appliance Issue" value="gateway-appliance-issue"/>
                 <element dependent_value="account-management" inactive_on_update="false" label="General Account Question" value="billing"/>
                 <element dependent_value="educate" inactive_on_update="false" label="General Educate Info" value="general-info"/>
+                <element dependent_value="translate" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="codepipeline" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="secrets-manager" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-servermigration-linux" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-kinesis" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-trusted-advisor" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-simple-workflow-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="transcribe" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="connect" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="vcenter-management-portal" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="config-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-elastic-beanstalk" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-workspaces" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="cloud9" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="mediaconvert" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-iot" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-cognito" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-opsworks-chef-automate" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-xray" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="kinesis-video-streams" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="service-deadline" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="freertos" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="support-api" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="key-management-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="service-workspaces-linux" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-servermigration-windows" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="code-star" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="iot-device-management" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="cloudtrail" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-simple-notification-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-simpledb" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="api-gateway" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="mobile-hub" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-web-application-firewall" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-mechanical-turk" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="dynamodb-accelerator" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-direct-connect" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="fargate" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="codecommit" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-quicksight" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-virtual-private-network" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-batch" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-data-pipeline" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-cloudformation" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="iot-1-click" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="comprehend" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-kinesis-analytics" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="zocalo" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="gamelift" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-redshift" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-inspector" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-shield" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="sentinel-provisioning-request" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-polly" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="ec2-container-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-mq" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="systems-manager" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-step-functions" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-cloud-hsm" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="mediastore" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="service-sumerian" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-elasticache" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="guardduty" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-identity-and-access-management" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="opsworks-puppet-enterprise" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="service-eks" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elastic-block-store" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-import-export-snowball" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="lambda-edge" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="codedeploy" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-health" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-codebuild" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="migration-hub" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-import" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="alexa-for-business" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="service-macie" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-application-discovery-windows" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-kinesis-firehose" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-organizations" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="mobile-analytics" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="directory-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elastic-file-system" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="mediatailor" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-simple-queue-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="alexa-services" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-route53" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="aws-lambda" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-athena" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-elasticsearch-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-glacier" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="elastic-load-balancing" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
@@ -412,6 +666,9 @@
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-appstream2" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-cloudsearch" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="single-sign-on" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-artifact" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="amazon-appstream" inactive_on_update="false" label="General Guidance" value="general-guidance"/>
                 <element dependent_value="sagemaker" inactive_on_update="false" label="General Guidance, Custom Algorithm" value="general-guidance-custom-algorithm"/>
@@ -435,7 +692,9 @@
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="HTTP 4xx/5xx Errors" value="http-4xx-5xx-errors"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="IAM Groups and Users" value="iam-groups-and-users"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="IIS" value="iis"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="Image API" value="apis"/>
                 <element dependent_value="amazon-appstream2" inactive_on_update="false" label="Image Builder" value="image-builder"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="Image Recognition Failure" value="image-recognition-failure"/>
                 <element dependent_value="service-workspaces-linux" inactive_on_update="false" label="Imaging" value="imaging"/>
                 <element dependent_value="api-gateway" inactive_on_update="false" label="Import / Export of APIs" value="import-export-api"/>
                 <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="Import Jobs" value="import-jobs"/>
@@ -450,6 +709,7 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Inspector" value="amazon-inspector-limits"/>
                 <element dependent_value="service-deadline" inactive_on_update="false" label="Installation/Configuration" value="installation-configuration"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Instance Issue" value="instance-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Instance Issue" value="instance-issue"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Instance Issues" value="instance-issues"/>
                 <element dependent_value="connect" inactive_on_update="false" label="Integration" value="integration"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Invoices and Reports" value="invoices-and-reports"/>
@@ -463,7 +723,9 @@
                 <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="Issues: Agent" value="issues-agent"/>
                 <element dependent_value="aws-application-discovery-windows" inactive_on_update="false" label="Issues: Agentless Connector" value="agentless-connector"/>
                 <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="Issues: Agentless Connector" value="issues-agentless-connector"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Job Failed" value="job-failed"/>
                 <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Job Failed" value="job-failed"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Job Flow Issue" value="job-flow-issue"/>
                 <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Job Flow Issue" value="job-flow-issue"/>
                 <element dependent_value="aws-import" inactive_on_update="false" label="Job Inquiry" value="job-inquiry"/>
                 <element dependent_value="aws-import-export-snowball" inactive_on_update="false" label="Job Inquiry" value="job-inquiry"/>
@@ -480,6 +742,7 @@
                 <element dependent_value="service-eks" inactive_on_update="false" label="Kubernetes Guidance" value="kubernetes-guidance"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Lambda" value="aws-lambda-limits"/>
                 <element dependent_value="lumberyard" inactive_on_update="false" label="Lambda (Cloud functions)" value="lambda-cloud-functions"/>
+                <element dependent_value="amazon-cognito" inactive_on_update="false" label="Lambda Integration" value="lambda-integration"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="Lambda Integration" value="lambda-integration"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Lambda@Edge" value="aws-lambda-edge-limits"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="Lambda@Edge" value="lambda-edge"/>
@@ -491,7 +754,10 @@
                 <element dependent_value="serverless-application-repository" inactive_on_update="false" label="Licensing Inquiry" value="licensing-inquiry"/>
                 <element dependent_value="service-deadline" inactive_on_update="false" label="Licensing Issue" value="licensing-issues"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Lightsail" value="lightsail-limits"/>
+                <element dependent_value="amazon-pinpoint" inactive_on_update="false" label="Limit Increase" value="limit-increase"/>
                 <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Limit Increase" value="limit-increase"/>
+                <element dependent_value="amazon-redshift" inactive_on_update="false" label="Limit Increase" value="limit-increase"/>
+                <element dependent_value="service-eks" inactive_on_update="false" label="Limit Increase" value="limit-increase"/>
                 <element dependent_value="elastic-load-balancing" inactive_on_update="false" label="Load Balancer Issue" value="load-balancer-issue"/>
                 <element dependent_value="cloudtrail" inactive_on_update="false" label="Log File Delivery" value="log-delivery"/>
                 <element dependent_value="cloudtrail" inactive_on_update="false" label="Log File Notification" value="log-notification"/>
@@ -500,6 +766,7 @@
                 <element dependent_value="amazon-greengrass" inactive_on_update="false" label="Machine Learning" value="machine-learning"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Machine Learning" value="service-code-machine-learning"/>
                 <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Machine Learning Configuration" value="machine-learning-configuration"/>
+                <element dependent_value="amazon-machine-learning" inactive_on_update="false" label="Machine Learning Model Quality" value="model-quality"/>
                 <element dependent_value="amazon-appstream2" inactive_on_update="false" label="Management Console and SDK" value="management-console-sdk"/>
                 <element dependent_value="chime" inactive_on_update="false" label="Managing Chime Teams" value="managing-chime-teams"/>
                 <element dependent_value="chime" inactive_on_update="false" label="Managing Meetings" value="managing-meetings"/>
@@ -519,10 +786,16 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="MediaPackage" value="service-code-mediapackage"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="MediaStore" value="service-code-mediastore"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="MediaTailor" value="service-code-mediatailor"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
                 <element dependent_value="amazon-redshift" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
                 <element dependent_value="aws-relational-database-service-sql-server" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
+                <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="Migration Issue" value="migration-issue"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="Mobile" value="mobile"/>
                 <element dependent_value="zocalo" inactive_on_update="false" label="Mobile Application Issue" value="mobile-application-issue"/>
                 <element dependent_value="iot-1-click" inactive_on_update="false" label="Mobile Apps issue" value="mobile-apps"/>
@@ -531,7 +804,9 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="MQ" value="service-code-amazon-mq"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="MySQL" value="mysql"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="MySQL" value="mysql"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="MySQL" value="mysql"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="NAT Gateway" value="nat-gateway"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="Network Issue" value="network-issue"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="Network Issue" value="network-issue"/>
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="Network Issue" value="network-issue"/>
                 <element dependent_value="sentinel-provisioning-request" inactive_on_update="false" label="New Landscape Request" value="new-landscape-request"/>
@@ -549,59 +824,125 @@
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="OpsWorks Stacks" value="opsworks-limits"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Organizations" value="aws-organizations"/>
                 <element dependent_value="mediatailor" inactive_on_update="false" label="Origin" value="origin"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-relational-database-service-postgresql" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-application-discovery-linux" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-inspector" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="service-eks" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-quicksight" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="support-api" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-cloudformation" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-lambda" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-relational-database-service-oracle" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-health" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="sentinel-report-incident" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="service-macie" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-application-discovery-windows" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="systems-manager" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="iot-device-management" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-direct-connect" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="ec2-container-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="iot-1-click" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="cloud9" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elasticsearch-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="opsworks-puppet-enterprise" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="config-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="chime" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-cloudsearch" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-route53" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-artifact" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="alexa-services" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-elasticache" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-glacier" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-acm-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="translate" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-relational-database-service-mariadb" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-cloudwatch" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elastic-block-store" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="fargate" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="cloudtrail" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-data-pipeline" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-cloud-hsm" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="single-sign-on" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-kinesis" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="mobile-analytics" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="guardduty" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-relational-database-service-mysql" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="vcenter-management-portal" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-kinesis-firehose" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-athena" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="gamelift" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="neptune" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="zocalo" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="key-management-service" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="codedeploy" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="transcribe" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="directory-service" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-elastic-beanstalk" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-lex" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="mobile-hub" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="workspaces-application-manager" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-organizations" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-simple-notification-service" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="systems-manager-for-microsoft-scvmm" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-elastic-transcoder" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-cognito" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-mechanical-turk" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-opsworks-chef-automate" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-trusted-advisor" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="comprehend" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-redshift" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="secrets-manager" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-polly" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-workspaces" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="elastic-load-balancing" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-glue" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-relational-database-service-aurora" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-dynamodb" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-identity-and-access-management" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-appstream" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="workmail" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="aws-opsworks" inactive_on_update="false" label="Other" value="other"/>
                 <element dependent_value="amazon-lightsail" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="amazon-relational-database-service-aurora-postgres" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="api-gateway" inactive_on_update="false" label="Other" value="other"/>
+                <element dependent_value="lambda-edge" inactive_on_update="false" label="Other / Limit Increase / Access" value="other"/>
                 <element dependent_value="customer-account" inactive_on_update="false" label="Other Account Issues" value="other-account-issues"/>
                 <element dependent_value="api-gateway" inactive_on_update="false" label="Other AWS Services" value="other-aws-services"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Other Billing Questions" value="other-billing-questions"/>
                 <element dependent_value="chime" inactive_on_update="false" label="Outlook Add-in Issue" value="outlook-addin-issue"/>
                 <element dependent_value="customer-account" inactive_on_update="false" label="Ownership Transfer" value="ownership-transfer"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="Partial Output" value="partial-output"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Patch Related" value="patch-related"/>
                 <element dependent_value="billing" inactive_on_update="false" label="Payment Issue" value="payment-issue"/>
+                <element dependent_value="amazon-elastic-file-system" inactive_on_update="false" label="Performance" value="performance"/>
                 <element dependent_value="amazon-elasticsearch-service" inactive_on_update="false" label="Performance" value="performance"/>
                 <element dependent_value="systems-manager-for-microsoft-scvmm" inactive_on_update="false" label="Performance" value="performance"/>
+                <element dependent_value="amazon-virtual-private-network" inactive_on_update="false" label="Performance" value="performance"/>
+                <element dependent_value="aws-storage-gateway" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
                 <element dependent_value="amazon-elasticache" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
+                <element dependent_value="dynamodb-accelerator" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
+                <element dependent_value="sentinel-report-incident" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
                 <element dependent_value="migration-hub" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
                 <element dependent_value="amazon-cloudsearch" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
                 <element dependent_value="sagemaker" inactive_on_update="false" label="Performance Issue" value="performance-issue"/>
                 <element dependent_value="lambda-edge" inactive_on_update="false" label="Permissions" value="permissions"/>
+                <element dependent_value="cloud9" inactive_on_update="false" label="Permissions" value="permissions"/>
                 <element dependent_value="service-catalog" inactive_on_update="false" label="Permissions" value="permissions"/>
                 <element dependent_value="aws-lambda" inactive_on_update="false" label="Permissions" value="real-permissions"/>
                 <element dependent_value="mediaconvert" inactive_on_update="false" label="Permissions (IAM Role)" value="permissions-iam-role"/>
+                <element dependent_value="amazon-elastic-transcoder" inactive_on_update="false" label="Permissions (S3/IAM Roles)" value="permissions"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Permissions / Policies" value="permissions-policies"/>
                 <element dependent_value="medialive" inactive_on_update="false" label="Permissions and Access Control" value="permissions-and-access-control"/>
                 <element dependent_value="mediapackage" inactive_on_update="false" label="Permissions and Access Control" value="permissions-and-access-control"/>
@@ -672,6 +1013,7 @@
                 <element dependent_value="amazon-simple-storage-service" inactive_on_update="false" label="S3 Select" value="s3-select"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="SageMaker" value="service-code-sagemaker"/>
                 <element dependent_value="auto-scaling" inactive_on_update="false" label="Scaling Policy Guidance" value="scaling-policy-guidance"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Scheduled Event" value="scheduled-event"/>
                 <element dependent_value="chime" inactive_on_update="false" label="Scheduling Issue" value="scheduling-issue"/>
                 <element dependent_value="amazon-database-migration-service" inactive_on_update="false" label="Schema Conversion Tool" value="schema-conversion-tool"/>
                 <element dependent_value="service-deadline" inactive_on_update="false" label="Scripting/SDK" value="scripting-sdk"/>
@@ -684,6 +1026,8 @@
                 <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="SDK/API Guidance" value="sdk-api-guidance"/>
                 <element dependent_value="iot-1-click" inactive_on_update="false" label="SDK/API Guidance" value="sdk-api"/>
                 <element dependent_value="service-deeplens" inactive_on_update="false" label="SDK/API Guidance" value="sdk-api-guidance"/>
+                <element dependent_value="appsync" inactive_on_update="false" label="SDK/API Guidance" value="sdk-api-guidance"/>
+                <element dependent_value="amazon-mq" inactive_on_update="false" label="SDK/API Guidance" value="sdk-api-guidance"/>
                 <element dependent_value="freertos" inactive_on_update="false" label="SDK/CLI" value="sdk-cli"/>
                 <element dependent_value="mediastore" inactive_on_update="false" label="SDK/CLI/API Issue" value="sdk-cli-api-issue"/>
                 <element dependent_value="secrets-manager" inactive_on_update="false" label="Secrets Rotation" value="secrets-rotation"/>
@@ -692,13 +1036,18 @@
                 <element dependent_value="aws-cloud-hsm" inactive_on_update="false" label="Security Issue" value="security-issue"/>
                 <element dependent_value="sentinel-report-incident" inactive_on_update="false" label="Security Related" value="security-related"/>
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="Security Related" value="security-related"/>
+                <element dependent_value="sentinel-change-request" inactive_on_update="false" label="Security Related" value="security-related"/>
                 <element dependent_value="dcv-desktop-cloud-visualization" inactive_on_update="false" label="Server Issues (Linux)" value="server-issues-linux"/>
                 <element dependent_value="dcv-desktop-cloud-visualization" inactive_on_update="false" label="Server Issues (Windows)" value="server-issues-windows"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Server Migration Service" value="server-migration-service"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Server Migration Service" value="server-migration-service"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="Service Catalog" value="service-catalog-limits"/>
                 <element dependent_value="appsync" inactive_on_update="false" label="Service Functionality" value="service-functionality"/>
                 <element dependent_value="service-deeplens" inactive_on_update="false" label="Service Functionality" value="service-functionality"/>
                 <element dependent_value="device-farm" inactive_on_update="false" label="Service Issue" value="service-issue"/>
+                <element dependent_value="aws-iot-analytics" inactive_on_update="false" label="Service Issue" value="service-issue"/>
+                <element dependent_value="aws-lambda" inactive_on_update="false" label="Service Issue" value="service-issue"/>
+                <element dependent_value="iot-1-click" inactive_on_update="false" label="Service Issue" value="service-issue"/>
                 <element dependent_value="mobile-hub" inactive_on_update="false" label="Service Issue" value="service-issue"/>
                 <element dependent_value="sentinel-service-request" inactive_on_update="false" label="Service Reporting Query" value="service-reporting-query"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="SES Dedicated IP" value="ses-dedicated-ip"/>
@@ -741,6 +1090,7 @@
                 <element dependent_value="amazon-elastic-mapreduce" inactive_on_update="false" label="Stuck Job" value="stuck-job"/>
                 <element dependent_value="amazon-simple-email-service" inactive_on_update="false" label="Suspension / Probation" value="suspension-probation"/>
                 <element dependent_value="zocalo" inactive_on_update="false" label="Sync Application Issue" value="sync-application-issue"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="Systems Manager" value="systems-manager"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="Systems Manager" value="systems-manager"/>
                 <element dependent_value="lumberyard" inactive_on_update="false" label="Team Management &amp; Credentials" value="team-management-creds"/>
                 <element dependent_value="aws-cloudformation" inactive_on_update="false" label="Template Issue" value="template-issue"/>
@@ -766,12 +1116,17 @@
                 <element dependent_value="billing" inactive_on_update="false" label="VAT" value="vat"/>
                 <element dependent_value="amazon-glacier" inactive_on_update="false" label="Vault Issue" value="vault-issue"/>
                 <element dependent_value="educate" inactive_on_update="false" label="Veteran Inquiry" value="veteran-inquiry"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="Video API" value="video-api"/>
+                <element dependent_value="amazon-rekognition" inactive_on_update="false" label="Video Recognition Failure" value="video-rekognition-failure"/>
                 <element dependent_value="vcenter-management-portal" inactive_on_update="false" label="VM Import / Export" value="vm-import-export"/>
+                <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="VM Import / Export" value="vm-import-export"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="VM Import / Export" value="vm-import-export"/>
                 <element dependent_value="amazon-elastic-block-store" inactive_on_update="false" label="Volume Issue" value="volume-issue"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="VPC" value="vpc-limits"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="VPC Endpoints" value="vpc-endpoints"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="VPC Peering" value="vpc-peering"/>
                 <element dependent_value="amazon-elastic-compute-cloud-windows" inactive_on_update="false" label="VPN Solutions" value="vpn-solutions"/>
+                <element dependent_value="amazon-elastic-compute-cloud-linux" inactive_on_update="false" label="VPN Solutions" value="vpn-solutions"/>
                 <element dependent_value="amazon-virtual-private-cloud" inactive_on_update="false" label="VPN Solutions" value="vpn-solutions"/>
                 <element dependent_value="service-limit-increase" inactive_on_update="false" label="WAF" value="waf-limits"/>
                 <element dependent_value="amazon-cloudfront" inactive_on_update="false" label="WAF (Web Application Firewall)" value="waf"/>
@@ -790,6 +1145,7 @@
                 <element inactive_on_update="false" label="Account Management" value="account-management"/>
                 <element inactive_on_update="false" label="Alexa for Business" value="alexa-for-business"/>
                 <element inactive_on_update="false" label="Alexa Services" value="alexa-services"/>
+                <element inactive_on_update="false" label="AMS - Change Request" value="sentinel-change-request"/>
                 <element inactive_on_update="false" label="AMS - Provisioning Request" value="sentinel-provisioning-request"/>
                 <element inactive_on_update="false" label="AMS - Report Incident" value="sentinel-report-incident"/>
                 <element inactive_on_update="false" label="AMS - Service Request" value="sentinel-service-request"/>
@@ -894,6 +1250,7 @@
                 <element inactive_on_update="false" label="Polly" value="amazon-polly"/>
                 <element inactive_on_update="false" label="QuickSight" value="amazon-quicksight"/>
                 <element inactive_on_update="false" label="Redshift" value="amazon-redshift"/>
+                <element inactive_on_update="false" label="Rekognition" value="amazon-rekognition"/>
                 <element inactive_on_update="false" label="Relational Database Service (Aurora - MySQL-compatible)" value="amazon-relational-database-service-aurora"/>
                 <element inactive_on_update="false" label="Relational Database Service (Aurora - PostgreSQL-compatible)" value="amazon-relational-database-service-aurora-postgres"/>
                 <element inactive_on_update="false" label="Relational Database Service (MariaDB)" value="amazon-relational-database-service-mariadb"/>
@@ -919,6 +1276,7 @@
                 <element inactive_on_update="false" label="Single Sign-On" value="single-sign-on"/>
                 <element inactive_on_update="false" label="Snowball" value="aws-import-export-snowball"/>
                 <element inactive_on_update="false" label="Step Functions" value="aws-step-functions"/>
+                <element inactive_on_update="false" label="Storage Gateway" value="aws-storage-gateway"/>
                 <element inactive_on_update="false" label="Sumerian" value="service-sumerian"/>
                 <element inactive_on_update="false" label="Support API" value="support-api"/>
                 <element inactive_on_update="false" label="Systems Manager" value="systems-manager"/>
