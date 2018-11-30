@@ -6,6 +6,7 @@
         <element label="AWS API Key" mandatory="true" max_length="20" name="aws_api_key" type="string"/>
         <element label="AWS Secret Key" mandatory="true" max_length="255" name="aws_secret_key" type="password2"/>
         <element default="snow_connector" label="IAM UserName" mandatory="true" max_length="255" name="iam_username" type="string"/>
+        <element default="0" display="true" label="Last Sync Time" max_length="40" name="last_sync" type="glide_date_time"/>
         <element label="Account Name" mandatory="true" max_length="255" name="name" type="string"/>
         <element label="Production" max_length="40" name="production" type="boolean"/>
         <index name="index">

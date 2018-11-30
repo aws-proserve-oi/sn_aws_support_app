@@ -8,7 +8,7 @@
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
-        <run_period>1970-01-01 00:00:15</run_period>
+        <run_period>1970-01-01 00:00:10</run_period>
         <run_start>2018-10-16 04:04:59</run_start>
         <run_time>1970-01-01 08:00:00</run_time>
         <run_type>periodically</run_type>
@@ -26,14 +26,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-16 04:05:23</sys_created_on>
         <sys_id>a32bc433db05230022367dda8c961961</sys_id>
-        <sys_mod_count>78</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_name>UpdateIncidents</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysauto_script_a32bc433db05230022367dda8c961961</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 15:36:51</sys_updated_on>
+        <sys_updated_on>2018-11-30 01:17:38</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

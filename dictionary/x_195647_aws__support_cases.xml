@@ -3,6 +3,8 @@
         <element label="AWS Account" max_length="32" name="aws_account" reference="x_195647_aws__accounts" type="reference"/>
         <element label="Case Id" max_length="255" name="case_id" type="string"/>
         <element label="Incident" max_length="32" name="incident" reference="incident" type="reference"/>
+        <element default="0" label="Last Sync Time" max_length="40" name="last_sync" type="glide_date_time"/>
+        <element default="30" label="Next Sync Time (ms)" max_length="40" name="next_sync" type="longint"/>
         <element default="low" label="severityCode" max_length="255" name="severity_code" type="string"/>
         <element default="unassigned" label="Status" max_length="255" name="status" type="string"/>
         <index name="index">

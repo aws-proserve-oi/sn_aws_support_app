@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="last_sync" label="Last Sync Time" language="en" table="x_195647_aws__accounts">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>last_sync</element>
+            <help/>
+            <hint/>
+            <label>Last Sync Time</label>
+            <language>en</language>
+            <name>x_195647_aws__accounts</name>
+            <plural>Last Sync Times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-29 15:23:59</sys_created_on>
+            <sys_id>2a8c0946db8aaf0022367dda8c961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Last Sync Time</sys_name>
+            <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
+            <sys_update_name>sys_documentation_x_195647_aws__accounts_last_sync_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-29 15:23:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

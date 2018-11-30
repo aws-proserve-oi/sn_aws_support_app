@@ -3,30 +3,34 @@
         <active>true</active>
         <condition_script/>
         <description/>
-        <event_name>x_195647_aws_.PullAwsCases</event_name>
-        <name>PullAwsCases</name>
-        <order>1</order>
+        <event_name>x_195647_aws_.PullAwsCase</event_name>
+        <name>PullAwsCase</name>
+        <order>100</order>
         <script><![CDATA[gs.include('AwsSupportUtils');
-(function PollAwsCases(aws_account) {
+(function PullAwsCase(case_ref) {
+    //gs.info('RUN PullAwsCase for ' + case_ref.case_id);
+    var aws_account = case_ref.aws_account.getRefRecord();
     var utils = new AwsSupportUtils(aws_account);
-    utils.importNewCases();    
+    if (utils.updateCaseReference(case_ref)) {
+        utils.updateIncidentCase(case_ref);
+    }
 })(current);
 ]]></script>
         <synchronous>false</synchronous>
         <sys_class_name>sysevent_script_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-11-01 08:51:44</sys_created_on>
+        <sys_created_on>2018-11-29 10:48:45</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>0b04eb7cdb21a30022367dda8c9619cb</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_name>PullAwsCases</sys_name>
+        <sys_id>7b6d4c42dbc6af0022367dda8c961978</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>PullAwsCase</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
-        <sys_update_name>sysevent_script_action_0b04eb7cdb21a30022367dda8c9619cb</sys_update_name>
+        <sys_update_name>sysevent_script_action_7b6d4c42dbc6af0022367dda8c961978</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-29 14:47:23</sys_updated_on>
+        <sys_updated_on>2018-11-30 01:24:04</sys_updated_on>
     </sysevent_script_action>
 </record_update>

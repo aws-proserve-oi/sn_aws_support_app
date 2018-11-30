@@ -10,20 +10,9 @@
 (function PullAwsCasesUpdates(aws_account) {
     //gs.info('RUN PullAwsCasesUpdates for ' + aws_account.name);
     var utils = new AwsSupportUtils(aws_account);
-    var aws_cases = utils.getActiveCasesForAccount(aws_account);
-    for (var c in aws_cases) {
-        var aws_case = utils.updateCaseReference(aws_cases[c]);
-        if (aws_case) {
-            //gs.info('update case ' + aws_case.case_id + " case status " + aws_case.status);
-            var incident = aws_case.incident.getRefRecord();
-            //if the incident is new, continue: prevents race condition.
-            if (incident.isNewRecord()) {continue;}
-            //if the incident is closed, continue, this should never get this far with a closed incident
-            //but as extra protection in case it does.
-            if (incident.incident_state == utils.StatusMap['closed']['IncidentState']) {continue;}
-            utils.setIncidentState(aws_case);
-            utils.updateCommunications(aws_case, aws_account);
-        }
+    var case_ref = utils.getActiveCases();
+    while (case_ref && case_ref.next()) {
+        gs.eventQueue("x_195647_aws_.PullAwsCase", case_ref);
     }
 })(current);
 ]]></script>
@@ -34,7 +23,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e7992085db25a30022367dda8c9619b5</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>PullAwsCasesUpdates</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
@@ -42,6 +31,6 @@
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sysevent_script_action_e7992085db25a30022367dda8c9619b5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-06 16:21:43</sys_updated_on>
+        <sys_updated_on>2018-11-29 14:46:35</sys_updated_on>
     </sysevent_script_action>
 </record_update>
