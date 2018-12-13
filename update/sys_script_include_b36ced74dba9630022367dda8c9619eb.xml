@@ -120,7 +120,6 @@ AwsSupportUtils.prototype = {
     // receives an instance of sys_journal_field 
     // returns true if the entry was added by AWS.
     createdByAws: function(entry) {
-        gs.info("entry " + entry.sys_created_by);
         if ((entry.sys_created_by == this.aws_user_name) || 
            (entry.sys_created_by == 'system')) {
             return true;
@@ -476,13 +475,13 @@ AwsSupportUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>176</sys_mod_count>
+        <sys_mod_count>177</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-12-13 00:44:13</sys_updated_on>
+        <sys_updated_on>2018-12-13 01:24:08</sys_updated_on>
     </sys_script_include>
 </record_update>
