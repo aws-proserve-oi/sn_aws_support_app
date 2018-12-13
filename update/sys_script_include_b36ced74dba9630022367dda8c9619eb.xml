@@ -8,11 +8,15 @@
         <name>AwsSupportUtils</name>
         <script><![CDATA[// Helper functions to interact with AWS Cases and Incident records.
 gs.include('AwsSupportApi');
-gs.include('global.AwsSupportUtils');
 var AwsSupportUtils = Class.create();
 AwsSupportUtils.prototype = {
     initialize: function(aws_account){
-        this.AwsSupportUtils = new global.AwsSupportUtils();
+        gs.include('global.AwsSupportUtils');
+        if (global.AwsSupportUtils) {
+            this.global_utils = new global.AwsSupportUtils();
+        } else {
+            this.global_utils = this;
+        }
         this.AwsSupportApi = new AwsSupportApi({
             accessKeyId: String(aws_account.aws_api_key),
             secretAccessKey: aws_account.aws_secret_key.getDecryptedValue()
@@ -27,9 +31,11 @@ AwsSupportUtils.prototype = {
         this.StatusMap = JSON.parse(gs.getProperty(gs.getCurrentScopeName()+".Config.StatusMap"));
         this.SeverityCodeMap = JSON.parse(gs.getProperty(gs.getCurrentScopeName()+".Config.SeverityCodeMap"));
     },
-    //calculates next update time for an Incident;
-    nextUpdateAt: function(incident) {
-
+    // default function to add entries to inident comments.
+    setJournalEntry: function(incident, body, user){
+        body += "\nsubmitted by " + user;
+        incident.comments = body;
+        incident.update();
     },
     // receives an incident and a comment JSON from a Support Case,
     // Writes an authored comment in the incident journal.
@@ -37,7 +43,7 @@ AwsSupportUtils.prototype = {
       if (comm.attachmentSet.length > 0) {
         this.addAttachments(incident, comm.attachmentSet);
       }
-      this.AwsSupportUtils.setJournalEntry(incident, comm.body, comm.submittedBy);
+      this.global_utils.setJournalEntry(incident, comm.body, comm.submittedBy);
     },
     // writes an attachment for an incident.
     // receives an incident glide record and an AWS case attachment set.
@@ -114,11 +120,12 @@ AwsSupportUtils.prototype = {
     // receives an instance of sys_journal_field 
     // returns true if the entry was added by AWS.
     createdByAws: function(entry) {
-      if ((entry.sys_created_by == this.aws_user_name) || 
-          (entry.sys_created_by == 'system')) {
-        return true;
-      }
-      return false;
+        gs.info("entry " + entry.sys_created_by);
+        if ((entry.sys_created_by == this.aws_user_name) || 
+           (entry.sys_created_by == 'system')) {
+            return true;
+        }
+        return false;
     },
     // receives a GlideRecord object from support_cases table
     // sets the associated incident state and assignee.
@@ -156,11 +163,11 @@ AwsSupportUtils.prototype = {
     },
 
     caseIsActive: function(aws_case_id) {
-        var case_record = new GlideRecord(gs.getCurrentScopeName()+'_support_cases');
-        case_record.addQuery('case_id','=', aws_case_id);
-        case_record.addQuery('status','!=', 'closed');
-        case_record.query();
-        if (case_record.hasNext()) {
+        var case_ref = new GlideRecord(gs.getCurrentScopeName()+'_support_cases');
+        case_ref.addQuery('case_id','=', aws_case_id);
+        case_ref.addQuery('status','!=', 'closed');
+        case_ref.query();
+        if (case_ref.hasNext()) {
             return true;
         } else {
             return false;
@@ -298,7 +305,7 @@ AwsSupportUtils.prototype = {
         var activity = new GlideRecord('sys_journal_field');
         activity.addQuery('element_id','=', String(incident_id));
         activity.addQuery('element','=', "comments");
-        activity.addQuery('sys_created_by','=', this.aws_user_name);
+        activity.addQuery('sys_created_by='+ this.aws_user_name +'^ORsys_created_by=system');
         activity.orderByDesc('sys_created_on');
         activity.setLimit(1);
         activity.query();
@@ -367,14 +374,12 @@ AwsSupportUtils.prototype = {
 
     updateIncidentCase: function(case_ref) {
         var incident = case_ref.incident.getRefRecord();
-        //if the incident is new, continue: prevents race condition.
+        //if the incident is new, continue: prevents any race condition.
         if (incident.isNewRecord()) {return;}
         //if the incident is closed, continue, this should never get this far with a closed incident
         //but as extra protection in case it does.
         if (incident.incident_state == this.StatusMap['closed']['IncidentState']) {return;}
-        //Update incident state from config map
         this.setIncidentState(case_ref);
-        //Update communications
         this.updateCommunications(case_ref);
     },
 
@@ -466,19 +471,18 @@ AwsSupportUtils.prototype = {
     },
     
     type: 'AwsSupportUtils'
-};
-]]></script>
+};]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-01 00:01:18</sys_created_on>
         <sys_id>b36ced74dba9630022367dda8c9619eb</sys_id>
-        <sys_mod_count>165</sys_mod_count>
+        <sys_mod_count>176</sys_mod_count>
         <sys_name>AwsSupportUtils</sys_name>
         <sys_package display_value="AwsSupport" source="x_195647_aws_">23f1ab6bdb41230022367dda8c961976</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwsSupport">23f1ab6bdb41230022367dda8c961976</sys_scope>
         <sys_update_name>sys_script_include_b36ced74dba9630022367dda8c9619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-30 01:39:18</sys_updated_on>
+        <sys_updated_on>2018-12-13 00:44:13</sys_updated_on>
     </sys_script_include>
 </record_update>
